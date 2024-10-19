@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>JustIn Law</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/custom-styles.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="css/font-awesome-ie7.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <style>
+/* Header Styles */
+.header-wrapper {
+    position: fixed; /* Fix the header at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Keep the header above other content */
+    background-color: #fff; /* Set background color to make header visible */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for a better look */
+    padding: 20px 0;
+}
+
+/* Navigation Menu Styles */
+.menu {
+    position: fixed; /* Fix the menu below the header */
+    top: 60px; /* Adjust the top value to be below the header */
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Keep menu below header but above content */
+    
+    
+}
+
+/* Footer Styles */
+.footer-wrapper {
+    position: fixed;
+    
+    
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Content Area Adjustments */
+body {
+    margin: 0;
+    padding-top: 120px; /* Ensure content starts below the fixed header and menu */
+    padding-bottom: 60px; /* Ensure content does not go under the footer */
+    overflow: hidden; /* Prevent the body from scrolling */
+}
+
+/* Experience Section */
+.experience-section {
+    height: calc(100vh - 180px); /* Full viewport height minus header, menu, and footer height */
+    overflow-y: auto; /* Add vertical scroll to the experience section */
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Experience section content */
+.experience-section .content {
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: left;
+}
+
+/* Image section adjustments */
+.image-section {
+    text-align: center;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.experience-badge {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <div class="header-wrapper">
+        <div class="site-name">
+            <h1>JustIn Law</h1>
+        </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="menu">
+        <div class="navbar">
+            <div class="container">
+                <div class="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li>
+                            <a href="javascript:void(0)" class="service-toggle" data-target="trialCourtServicesPanel">Trial Court Services/Cases</a>
+                            <div class="sub-services-panel" id="trialCourtServicesPanel">
+                                <ul class="sub-services">
+                                    <li>
+                                        <a href="#">Criminal Law</a>
+                                        <ul class="nested-sub-services">
+                                            <li><a href="Criminal_Law.html">Metropolitan Magistrate - JFCM</a></li>
+                                            <li><a href="Criminal_Law.html">Metropolitan Sessions Court Services/Cases</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Civil Law</a>
+                                        <ul class="nested-sub-services">
+                                            <li><a href="Civil_Law.html">Junior Civil Judge Court Services</a></li>
+                                            <li><a href="Civil_Law.html">District Civil Judge Court Services</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="Family_Law.html">Family Law</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="highcourt.html">High Court Services/Cases</a></li>
+                        <li><a href="state-govt.html">State Govt Tribunal Services/Cases</a></li>
+                        <li><a href="central-govt.html">Central Govt Tribunal Services/Cases</a></li>
+                        <li><a href="competitive-authority.html">Competitive Authority/Commissions/Forums</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experience Section -->
+    <section class="experience-section">
+        <div class="container">
+            <div class="image-section">
+                <img src="img/images.png" alt="Legal Team">
+                <div class="experience-badge">
+                    <h3>5 Years Experience</h3>
+                </div>
+            </div>
+            <div class="content-section">
+                <h5>Welcome to Judicialtime.com</h5>
+                <h1>We Provide Reliable And Effective Legal Services</h1>
+                <p>At [Your Law Firm’s Name], we believe that exceptional legal representation starts with a commitment to our clients’ needs. Since 10 years  we have dedicated ourselves to providing expert legal services with integrity, professionalism, and a personalized approach.</p>
+                <h1>Our Mission</h1>
+                <p>Our mission is to deliver comprehensive and effective legal solutions tailored to the unique needs of each client. We strive to achieve the best possible outcomes while maintaining the highest standards of ethical practice and client care.</p>
+                <h1>Who We Are</h1>
+                <p>Our team consists of highly skilled attorneys with extensive experience in various areas of law, including [Criminal defence ,Civil law,  Family law, Corporate law,  High Court cases, State Tribunals  and Centre Tribunals  etc.]. Each member of our firm brings a wealth of knowledge, a dedication to justice, and a passion for advocacy.</p>
+                <h1>Our Approach</h1>
+                <p>We understand that legal issues can be complex and stressful. That’s why we take a client-cantered approach, focusing on clear communication, transparency, and empathy. Our attorneys work closely with clients to ensure they are well-informed and confident throughout the legal process.</p>
+                <h1>Our Values</h1>
+                <p> •	Integrity: We uphold the highest ethical standards and are committed to honesty and transparency in all our dealings.<br>
+                    •	Excellence: We strive for excellence in every case, leveraging our expertise to achieve favourable results for our clients.<br>
+                    •	Empathy: We recognize the personal and emotional challenges our clients face and offer compassionate support and guidance.
+                </p>
+                <h1>Our Achievements</h1>
+                <p>Over the years, [Your Law Firm’s Name] has earned a reputation for excellence in the legal community. Our accomplishments include [mention any notable achievements, awards, recognitions, or successful cases].</p>
+                <h1>Why Choose Us?</h1>
+                <p> •	Proven Expertise: Our attorneys have a track record of success in their respective fields.<br>
+                    •	Client-Focused Service: We are dedicated to understanding and addressing your individual legal needs.<br>
+                    •	Client-Focused Service: We are dedicated to understanding and addressing your individual legal needs.<br>
+                    •	Commitment to Results: We work tirelessly to achieve the best possible outcomes for our clients.
+
+                </p>
+                <h1>Get in Touch</h1>
+                <p>Whether you are facing a legal challenge or seeking advice, we are here to help. Contact us today to schedule a consultation and learn how we can assist you.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <div class="footer-wrapper">
+        <div class="container">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Supreme Court Services</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="join_advocate.html">Advocate</a></li>
+
+                    <li>
+                        <a href="https://instagram.com" target="_blank">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com" target="_blank">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com" target="_blank">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="js/jquery.mobilemenu.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.menu').mobileMenu();
+        });
+    </script>
+</body>
+</html>
