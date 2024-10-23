@@ -22,6 +22,57 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <style>
+        /* Header Styles */
+.header-wrapper {
+    position: fixed; /* Fix the header at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Keep the header above other content */
+    background-color: #fff; /* Set background color to make header visible */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for a better look */
+    padding: 20px 0;
+}
+
+/* Navigation Menu Styles */
+.menu {
+    position: fixed; /* Fix the menu below the header */
+    top: 60px; /* Adjust the top value to be below the header */
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Keep menu below header but above content */
+    
+    
+}
+
+/* Footer Styles */
+.footer-wrapper {
+    position: fixed;
+    
+    
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Content Area Adjustments */
+body {
+    margin: 0;
+    padding-top: 120px; /* Ensure content starts below the fixed header and menu */
+    padding-bottom: 60px; /* Ensure content does not go under the footer */
+    overflow: hidden; /* Prevent the body from scrolling */
+}
+
+.container > .navbar-header, .container > .navbar-collapse {
+    margin-right: 0;
+    margin-left: -50px;
+}
+    </style>
 </head>
 
 <body>
@@ -80,39 +131,39 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="img/Telangana.png" alt="">
+                    <img src="img/pixelcut-export.jpeg.jpg" alt="">
                     <div class="carousel-caption">
-                        <h1>Hyderabad High Court</h1>
+                        <!--<h1>Hyderabad High Court</h1>-->
                     </div>
                 </div>
                 <div class="item">
-                    <img src="img/Telangana1.png" alt="">
+                    <img src="img/pixelcut-export (6).jpeg.jpg" alt="">
                     <div class="carousel-caption">
-                        <h1>High Court Telangana</h1>
+                       <!-- <h1>High Court Telangana</h1>-->
                     </div>
                 </div>
                 <div class="item">
-                    <img src="img/Andhra.png" alt="">
+                    <img src="img/pixelcut-export (5).jpeg.jpg" alt="">
                     <div class="carousel-caption">
-                        <h1>High Court Andhra Pradesh</h1>
+                       <!-- <h1>High Court Andhra Pradesh</h1>-->
                     </div>
                 </div>
                 <div class="item">
-                    <img src="img/Bangalore.png" alt="">
+                    <img src="img/pixelcut-export (4).jpeg.jpg" alt="">
                     <div class="carousel-caption">
-                        <h1>High Court Bangalore</h1>
+                      <!--  <h1>High Court Bangalore</h1>-->
                     </div>
                 </div>
                 <div class="item">
-                    <img src="img/Delhi.png" alt="">
+                    <img src="img/pixelcut-export (3).jpeg.jpg" alt="">
                     <div class="carousel-caption">
-                        <h1>High Court Delhi</h1>
+                       <!-- <h1>High Court Delhi</h1>-->
                     </div>
                 </div>
                 <div class="item">
-                    <img src="img/Kerla.png" alt="">
+                    <img src="img/pixelcut-export (2).jpeg.jpg" alt="">
                     <div class="carousel-caption">
-                        <h1>High Court Kerla</h1>
+                        <!--<h1>High Court Kerla</h1>-->
                     </div>
                 </div>
                 <!--<div class="item">
@@ -120,13 +171,13 @@
                     <div class="carousel-caption">
                         <h1>High Court Odisha</h1>
                     </div> 
-                </div>-->
+                </div>
                 <div class="item">
                     <img src="img/Tamil.png" alt="">
                     <div class="carousel-caption">
                         <h1>High Court TamilNadu</h1>
                     </div>
-                </div>
+                </div>-->
             </div>
 
             <!-- Controls -->

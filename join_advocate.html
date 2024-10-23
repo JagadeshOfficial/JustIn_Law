@@ -23,6 +23,51 @@
     <script src="js/respond.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
     <style>
+     
+        /* Header Styles */
+.header-wrapper {
+    position: fixed; /* Fix the header at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Keep the header above other content */
+    background-color: #fff; /* Set background color to make header visible */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for a better look */
+    padding: 20px 0;
+}
+.container > .navbar-header, .container > .navbar-collapse {
+    margin-right: 0;
+    margin-left: -50px;
+}
+/* Navigation Menu Styles */
+.menu {
+    position: fixed; /* Fix the menu below the header */
+    top: 60px; /* Adjust the top value to be below the header */
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Keep menu below header but above content */
+    
+    
+}
+
+/* Footer Styles */
+.footer-wrapper {
+    position: fixed;
+    
+    
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Content Area Adjustments */
+body {
+    margin: 0;
+    padding-top: 120px; /* Ensure content starts below the fixed header and menu */
+    padding-bottom: 60px; /* Ensure content does not go under the footer */
+    overflow: hidden; /* Prevent the body from scrolling */
+}
+
         .form-container {
             background-color: aliceblue;
     max-width: 800px;
