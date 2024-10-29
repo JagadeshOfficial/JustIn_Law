@@ -69,15 +69,15 @@ body {
 }
 
         .form-container {
-            background-color: aliceblue;
-    max-width: 800px;
-    margin: 0 auto;
+           
+    max-width: 755px;
+    margin: -10px 195px;
 }
 
 .form-row {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: -5px;
 }
 
 .form-group {
@@ -101,7 +101,7 @@ input, textarea {
 }
 
 button {
-    padding: 5px 200px;
+    padding: 5px 240px;
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -111,17 +111,27 @@ button {
 button:hover {
     background-color: #45a049;
 }
+.form-group-message
+{
+    width: 520px;
+}
 
     </style>
 </head>
 
 <body>
-    <!-- Header Section -->
-    <div class="header-wrapper">
-        <div class="site-name">
-            <h1>Law Mine</h1>
-        </div>
+       <!-- Header Section -->
+<div class="header-wrapper">
+    <div class="site-name" style="display: flex; align-items: center;">
+        <li style="list-style: none; margin-right: 10px;">
+            <a href="index.html" style="padding: 0; background: none; box-shadow: none;">
+                <img src="img/Logo.png" alt="Logo" style="height: 70px; background: transparent; box-shadow: none;">
+            </a>
+        </li>
+        <h1 style="margin: 0;">Law Mine</h1>
     </div>
+</div>
+
 
     <!-- Navigation Menu -->
     <div class="menu">
@@ -162,59 +172,60 @@ button:hover {
             </div>
         </div>
     </div>
-    <!-- Form Section -->
-    <div class="form-container">
-        <h1>Join Advocate</h1>
-        <form id="advocateForm" action="/submit" method="POST" enctype="multipart/form-data">
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="name">Name of the Advocate:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone No:</label>
-                    <input type="text" id="phone" name="phone" required>
-                </div>
+<!-- Form Section -->
+<div class="form-container">
+    <h1>Join Advocate</h1>
+    <form id="advocateForm" action="/submit" method="POST" enctype="multipart/form-data">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="advocateName">Name of the Advocate:</label>
+                <input type="text" id="advocateName" name="advocate_name" required>
             </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="email">Email ID:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="location">Location:</label>
-                    <input type="text" id="location" name="location" required>
-                </div>
+            <div class="form-group">
+                <label for="advocatePhone">Phone No:</label>
+                <input type="text" id="advocatePhone" name="advocate_phone" required>
             </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="experience">Total Legal Experience:</label>
-                    <input type="text" id="experience" name="experience" required>
-                </div>
-                <div class="form-group">
-                    <label for="specialized">Specialized Cases:</label>
-                    <input type="text" id="specialized" name="specialized" required>
-                </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="advocateEmail">Email ID:</label>
+                <input type="email" id="advocateEmail" name="advocate_email" required>
             </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="enrollment">Enrollment No:</label>
-                    <input type="text" id="enrollment" name="enrollment" required>
-                </div>
-                <div class="form-group">
-                    <label for="resume">Resume in PDF Format:</label>
-                    <input type="file" id="resume" name="resume" accept=".pdf" required>
-                </div>
+            <div class="form-group">
+                <label for="advocateLocation">Location:</label>
+                <input type="text" id="advocateLocation" name="advocate_location" required>
             </div>
-            <div class="form-row full-width">
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="advocateExperience">Total Legal Experience:</label>
+                <input type="text" id="advocateExperience" name="advocate_experience" required>
             </div>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+            <div class="form-group">
+                <label for="advocateSpecialized">Specialized Cases:</label>
+                <input type="text" id="advocateSpecialized" name="advocate_specialized" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="advocateEnrollment">Enrollment No:</label>
+                <input type="text" id="advocateEnrollment" name="advocate_enrollment" required>
+            </div>
+            <div class="form-group">
+                <label for="advocateResume">Resume in PDF Format:</label>
+                <input type="file" id="advocateResume" name="advocate_resume" accept=".pdf" required>
+            </div>
+        </div>
+        <div class="form-row full-width">
+            <div class="form-group-message">
+                <label for="advocateMessage">Message:</label>
+                <textarea id="advocateMessage" name="advocate_message" rows="4" required></textarea>
+            </div>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
 
     
 

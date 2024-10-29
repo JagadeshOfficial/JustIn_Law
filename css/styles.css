@@ -5,6 +5,7 @@
 html, body {
 	height: 100%;
 	margin: 0;
+  overflow: hidden;
 	display: flex;
 	flex-direction: column; /* Flexbox layout */
   }
@@ -101,6 +102,7 @@ html, body {
   
   .navbar .navbar-nav li {
 	padding: 25px;
+  
   }
   
   .navbar .navbar-nav a {
@@ -171,7 +173,7 @@ html, body {
   .experience-section .container {
     display: flex;
     flex-wrap: wrap; /* Ensure responsiveness */
-    align-items: center; /* Vertically center content */
+    align-items: start; /* Vertically center content */
     justify-content: space-between;
   }
   
@@ -387,11 +389,11 @@ font-weight: bold; /* Bold text */
    }
  form {
  margin-top: 300px; /* Push form down slightly, adjust if needed */
- padding: 20px; /* Reduce padding inside the form */
- padding-left: 2px;
+ padding: 35px; /* Reduce padding inside the form */
+ padding-left: 200px;
  border-radius: 5px;
  width: 100%; /* Adjust width for a more compact look */
- margin: -15px 15px; /* Center the form */
+ margin: -15px 8px; /* Center the form */
 }
 
 input, select, textarea {
@@ -418,6 +420,7 @@ textarea {
  display: flex;
  font-family: 'source_sans_probold';
  text-transform: uppercase;
+ gap: 5px; /* Adjust spacing as needed */
  color: #34b091;
  font-size: 28px;
  padding-top: 185px;
