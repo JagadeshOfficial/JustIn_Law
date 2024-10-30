@@ -34,19 +34,16 @@ const upload = multer({ storage: storage });
 // Serve static files like CSS from the root directory (css folder)
 app.use('/css', express.static(path.join(__dirname, 'css')));
 
+// Serve images from the root directory (images folder)
+app.use('/img', express.static(path.join(__dirname, 'img')));
+
+// Serve static files (css, js, img) from the root directory
+app.use(express.static(path.join(__dirname))); // This serves all files in the root directory
 
 // Serve the HTML file and handle form submission in the same codebase
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html')); // Serve the index.html from root directory
 });
-
-
-// Serve images from the root directory (images folder)
-app.use('/img', express.static(path.join(__dirname, 'img')));
-// Serve static files (css, js, img) from the root directory
-app.use(express.static(path.join(__dirname))); // This serves all files in the root directory
-
-
 
 // Handle form submission
 app.post('/submit', upload.single('resume'), (req, res) => {
@@ -71,7 +68,7 @@ app.post('/submit', upload.single('resume'), (req, res) => {
         }
     });
 
-    // Set up email data
+    // Set up email data with the correct path for the attachment
     const mailOptions = {
         from: `"JustIn Law" <${process.env.EMAIL_USER}>`,
         to: email, // receiver email
@@ -80,13 +77,13 @@ app.post('/submit', upload.single('resume'), (req, res) => {
         attachments: [
             {
                 filename: resume.originalname, // Original name of the file
-                path: resume.path               // Path to the uploaded resume
+                path: path.join(__dirname, resume.path) // Full path to the uploaded resume
             }
         ]
     };
 
     // Log the attachment path for debugging
-    console.log('Resume path:', resume.path);
+    console.log('Resume path:', path.join(__dirname, resume.path));
 
     // Send email
     transporter.sendMail(mailOptions, (error, info) => {
@@ -99,12 +96,18 @@ app.post('/submit', upload.single('resume'), (req, res) => {
     });
 
     // Optional: Notify admin (adjust the email address as needed)
-    const adminMailOptions = {
-        from: `"JustIn Law" <${process.env.EMAIL_USER}>`,
-        to: 'chat.judicial365@gmail.com', // Admin's email address
-        subject: 'New Advocate Submission Received',
-        text: `An advocate has submitted their details:\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nLocation: ${location}\nExperience: ${experience}\nSpecialized Cases: ${specialized}\nEnrollment No: ${enrollment}\nMessage: ${message}`
-    };
+const adminMailOptions = {
+    from: `"JustIn Law" <${process.env.EMAIL_USER}>`,
+    to: 'chat.judicial365@gmail.com', // Admin's email address
+    subject: 'New Advocate Submission Received',
+    text: `An advocate has submitted their details:\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nLocation: ${location}\nExperience: ${experience}\nSpecialized Cases: ${specialized}\nEnrollment No: ${enrollment}\nMessage: ${message}`,
+    attachments: [
+        {
+            filename: resume.originalname, // Original name of the file
+            path: path.join(__dirname, resume.path) // Full path to the uploaded resume
+        }
+    ]
+};
 
     transporter.sendMail(adminMailOptions, (error, info) => {
         if (error) {
