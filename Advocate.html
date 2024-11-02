@@ -6,9 +6,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Law Mine</title>
+    <title>JustIn Law</title>
 
-    <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/component.css">
@@ -18,71 +17,23 @@
     <link rel="stylesheet" href="css/font-awesome-ie7.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/jquery.mobilemenu.js"></script>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" integrity="sha384-whateverYourIntegrityHashIs" crossorigin="anonymous">
-
-    <style>
-      /* Header Styles */
-.header-wrapper {
-  position: fixed; /* Fix the header at the top */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* Keep the header above other content */
-  background-color: #fff; /* Set background color to make header visible */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for a better look */
-  padding: 20px 0;
-}
-
-/* Navigation Menu Styles */
-.menu {
-  position: fixed; /* Fix the menu below the header */
-  top: 60px; /* Adjust the top value to be below the header */
-  left: 0;
-  width: 100%;
-  z-index: 999; /* Keep menu below header but above content */
-  
-  
-}
-
-/* Footer Styles */
-.footer-wrapper {
-  position: fixed;
-  
-  
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
-}
-
-/* Content Area Adjustments */
-body {
-  margin: 0;
-  padding-top: 120px; /* Ensure content starts below the fixed header and menu */
-  padding-bottom: 60px; /* Ensure content does not go under the footer */
-  overflow: hidden; /* Prevent the body from scrolling */
-}
-.container > .navbar-header, .container > .navbar-collapse {
-    margin-right: 0;
-    margin-left: -50px;
-}
-  </style>
+    <script>
+      $(document).ready(function(){
+        $('.menu').mobileMenu();
+      });
+    </script>
   </head>
 
   <body>
-        <!-- Header Section -->
-<div class="header-wrapper">
-  <div class="site-name" style="display: flex; align-items: center;">
-      <li style="list-style: none; margin-right: 10px;">
-          <a href="index.html" style="padding: 0; background: none; box-shadow: none;">
-              <img src="img/Logo.png" alt="Logo" style="height: 70px; background: transparent; box-shadow: none;">
-          </a>
-      </li>
-      <h1 style="margin: 0;">Law Mine</h1>
-  </div>
-</div>
-
+    <!-- Header Section -->
+    <div class="header-wrapper">
+      <div class="site-name">
+        <h1>JustIn Law</h1>
+      </div>
+    </div>
 
     <!-- Navigation Menu -->
     <div class="menu">
@@ -91,7 +42,8 @@ body {
           <div class="navbar-collapse">
             <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
+              <li><a href="about.html">About</a></li>
+              
               <li>
                 <a href="javascript:void(0)" class="service-toggle" data-target="trialCourtServicesPanel">Trial Court Services/Cases</a>
                 <div class="sub-services-panel" id="trialCourtServicesPanel">
@@ -125,16 +77,24 @@ body {
         </div>
       </div>
     </div>
+
+
     <div class="container">
-      <div class="featured-block">  
+      <div class="featured-block">
+                <!--<div class="heading-block">
+                    <h2>Hyderabad</h2>
+                </div>-->
+          
         <!-- Example row of columns -->
         <div class="row">
           <div class="col-md-3">
             <div class="block">
               <div class="thumbnail">
+                <img src="img/athik garu.jpeg" alt="" class="img-responsive">
                 <div class="caption">
-                  <h1>State Co-Operative Society Tribunals</h1>
-                  <a class="btn" href="contact.html">more</a>
+                  <h1>Baskula Athik</h1>
+                  <p><b>Corporate  speclization (High Court)</b></p>
+                  <a class="btn" href="#">more</a>
                 </div>
               </div>
             </div>
@@ -142,9 +102,11 @@ body {
           <div class="col-md-3">
             <div class="block">
               <div class="thumbnail">
+                <img src="img/saidulu garu.jpeg" alt="" class="img-responsive">
                 <div class="caption">
-                  <h1>Labour Court Tribunals</h1>
-                  <a class="btn" href="contact.html">more</a>
+                  <h1>P SAIDULU</h1>
+                  <p><b>Criminal practice (High Court)</b></p>
+                  <a class="btn" href="#">more</a>
                 </div>
               </div>
             </div>
@@ -152,9 +114,11 @@ body {
           <div class="col-md-3">
             <div class="block">
               <div class="thumbnail">
+                <img src="img/sapa naresh.jpeg" alt="" class="img-responsive">
                 <div class="caption">
-                  <h1>State Administrative Tribunals</h1>
-                  <a class="btn" href="contact.html">more</a>
+                  <h1>Sapa  Naresh</h1>
+                  <p><b>Civil practice (High Court)</b></p>
+                  <a class="btn" href="#">more</a>
                 </div>
               </div>
             </div>
@@ -162,9 +126,11 @@ body {
           <div class="col-md-3">
             <div class="block">
               <div class="thumbnail">
+                <img src="img/ravikumar.jpeg" alt="" class="img-responsive">
                 <div class="caption">
-                  <h1>Endoment Tribunals</h1>
-                  <a class="btn" href="contact.html">more</a>
+                  <h1>T Ravi Kumar</h1>
+                  <p><b>Legal Adviser (Immigration law)</b></p>
+                  <a class="btn" href="#">more</a>
                 </div>
               </div>
             </div>
@@ -176,9 +142,11 @@ body {
           <div class="col-md-3">
             <div class="block">
               <div class="thumbnail">
+                <img src="img/rajitha1.jpeg" alt="" class="img-responsive">
                 <div class="caption">
-                  <h1>Election Tribunals</h1>
-                  <a class="btn" href="contact.html">more</a>
+                  <h1>M Rajitha</h1>
+                  <p><b>Legal consultant (Family Law, constitutional law)</b></p>
+                  <a class="btn" href="#">more</a>
                 </div>
               </div>
             </div>
@@ -186,9 +154,23 @@ body {
           <div class="col-md-3">
             <div class="block">
               <div class="thumbnail">
+                <img src="img/bhargav.jpeg" alt="" class="img-responsive">
                 <div class="caption">
-                  <h1>Pollution Control Board Tribunals</h1>
-                  <a class="btn" href="contact.html">more</a>
+                  <h1>Bhargav</h1>
+                  <p><b>Legal Consultant (All cases)</b></p>
+                  <a class="btn" href="#">more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--<div class="col-md-3">
+            <div class="block">
+              <div class="thumbnail">
+                <img src="img/img6.jpg" alt="" class="img-responsive">
+                <div class="caption">
+                  <h1>Curabitur sodales</h1>
+                  <p>Fusce vel dui. Sed lectus. Integer euismod lacus luctus magna. Curabitur tortor.</p>
+                  <a class="btn" href="#">more</a>
                 </div>
               </div>
             </div>
@@ -196,41 +178,18 @@ body {
           <div class="col-md-3">
             <div class="block">
               <div class="thumbnail">
+                <img src="img/img6.jpg" alt="" class="img-responsive">
                 <div class="caption">
-                  <h1>Income Tax Tribunals</h1>
-                  <a class="btn" href="contact.html">more</a>
+                  <h1>Maecenas tempus</h1>
+                  <p>Pellentesque posuere. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.</p>
+                  <a class="btn" href="#">more</a>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="block">
-              <div class="thumbnail">
-                <div class="caption">
-                  <h1>Arbitration Tribunals</h1>
-                  <a class="btn" href="contact.html">more</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- New row of blocks -->
-        <div class="row">
-          <div class="col-md-3">
-            <div class="block">
-              <div class="thumbnail">
-                <div class="caption">
-                  <h1>Land Revenue Tribunals</h1>
-                  <a class="btn" href="contact.html">more</a>
-                </div>
-              </div>
-            </div>
-          </div>
+          </div>-->
         </div>
       </div> 
     </div>
-
-    
 
     <!-- Footer Section -->
     <div class="footer-wrapper">
@@ -238,7 +197,7 @@ body {
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="#">Supreme Court Services</a></li>
-            <li><a href="team.html">Cases</a></li>
+            <li><a href="team.html">Team</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="join_advocate.html">Advocate</a></li>
 
@@ -266,5 +225,6 @@ body {
     <script src="js/jquery-1.9.1.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    
   </body>
 </html>
