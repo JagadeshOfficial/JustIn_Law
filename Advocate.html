@@ -8,23 +8,66 @@
 
     <title>JustIn Law</title>
 
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/component.css">
-    <link rel="stylesheet" href="css/custom-styles.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/demo.css">
-    <link rel="stylesheet" href="css/font-awesome-ie7.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="js/jquery.mobilemenu.js"></script>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <script>
-      $(document).ready(function(){
-        $('.menu').mobileMenu();
-      });
-    </script>
+     <!-- Bootstrap core CSS -->
+     <link href="css/bootstrap.css" rel="stylesheet">
+     <link rel="stylesheet" href="css/normalize.css">
+     <link rel="stylesheet" href="css/component.css">
+     <link rel="stylesheet" href="css/custom-styles.css">
+     <link rel="stylesheet" href="css/font-awesome.css">
+     <link rel="stylesheet" href="css/demo.css">
+     <link rel="stylesheet" href="css/font-awesome-ie7.css">
+     <link rel="stylesheet" href="css/styles.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+     <style>
+         /* Header Styles */
+ .header-wrapper {
+     position: fixed; /* Fix the header at the top */
+     top: 0;
+     left: 0;
+     width: 100%;
+     z-index: 1000; /* Keep the header above other content */
+     background-color: #fff; /* Set background color to make header visible */
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for a better look */
+     padding: 20px 0;
+ }
+ 
+ /* Navigation Menu Styles */
+ .menu {
+     position: fixed; /* Fix the menu below the header */
+     top: 60px; /* Adjust the top value to be below the header */
+     left: 0;
+     width: 100%;
+     z-index: 999; /* Keep menu below header but above content */
+     
+     
+ }
+ 
+ /* Footer Styles */
+ .footer-wrapper {
+     position: fixed;
+     
+     
+     color: #fff;
+     padding: 10px 0;
+     text-align: center;
+ }
+ 
+ /* Content Area Adjustments */
+ body {
+     margin: 0;
+     padding-top: 120px; /* Ensure content starts below the fixed header and menu */
+     padding-bottom: 60px; /* Ensure content does not go under the footer */
+     overflow: hidden; /* Prevent the body from scrolling */
+ }
+ 
+ .container > .navbar-header, .container > .navbar-collapse {
+     margin-right: 0;
+     margin-left: -50px;
+ }
+     </style>
+  
+    
   </head>
 
   <body>
@@ -102,7 +145,7 @@
           <div class="col-md-3">
             <div class="block">
               <div class="thumbnail">
-                <img src="img/saidulu garu.jpeg" alt="" class="img-responsive">
+                <img src="img/saidulu garu.jpg" alt="" class="img-responsive">
                 <div class="caption">
                   <h1>P SAIDULU</h1>
                   <p><b>Criminal practice (High Court)</b></p>
@@ -114,7 +157,7 @@
           <div class="col-md-3">
             <div class="block">
               <div class="thumbnail">
-                <img src="img/sapa naresh.jpeg" alt="" class="img-responsive">
+                <img src="img/sapa naresh.jpg" alt="" class="img-responsive">
                 <div class="caption">
                   <h1>Sapa  Naresh</h1>
                   <p><b>Civil practice (High Court)</b></p>
@@ -126,7 +169,7 @@
           <div class="col-md-3">
             <div class="block">
               <div class="thumbnail">
-                <img src="img/ravikumar.jpeg" alt="" class="img-responsive">
+                <img src="img/ravikumar.jpg" alt="" class="img-responsive">
                 <div class="caption">
                   <h1>T Ravi Kumar</h1>
                   <p><b>Legal Adviser (Immigration law)</b></p>
@@ -142,7 +185,7 @@
           <div class="col-md-3">
             <div class="block">
               <div class="thumbnail">
-                <img src="img/rajitha1.jpeg" alt="" class="img-responsive">
+                <img src="img/rajitha1.jpg" alt="" class="img-responsive">
                 <div class="caption">
                   <h1>M Rajitha</h1>
                   <p><b>Legal consultant (Family Law, constitutional law)</b></p>
@@ -196,10 +239,11 @@
       <div class="container">
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#">Supreme Court Services</a></li>
-            <li><a href="team.html">Team</a></li>
+            <!--<li><a href="#">Supreme Court Services</a></li>-->
+            <li><a href="team.html">Cases</a></li>
+            <li><a href="Advocate.html">Advocate</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="join_advocate.html">Advocate</a></li>
+            <li><a href="join_advocate.html">Join Advocate</a></li>
 
             <li>
               <a href="https://instagram.com" target="_blank">
@@ -216,6 +260,21 @@
                   <i class="fa fa-facebook" aria-hidden="true"></i>
               </a>
           </li>
+          <li>
+            <a href="https://youtube.com" target="_blank">
+                <i class="fa fa-youtube" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://threads.net" target="_blank">
+                <img src="img/icons8-threads-48.png" alt="Threads Icon" style="width: 16px; height: 16px;"> <!-- Replace with actual Threads icon if available -->
+            </a>
+        </li>
+        <li>
+            <a href="https://linkedin.com" target="_blank">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+        </li>
           </ul>
         </div>
       </div>
