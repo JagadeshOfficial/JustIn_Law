@@ -711,6 +711,29 @@ textarea {
   color: #007bff; /* Change icon color on hover */
 }
 
+/* Base styling for the button */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Shake effect animation */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+/* Apply the shake effect continuously */
+.shake-btn {
+  animation: shake 1.0s ease-in-out infinite;
+}
+
 
 
 
