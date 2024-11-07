@@ -75,16 +75,16 @@
 	Global styles starts here
  ************************************************/
 body{background: #e6e6e6; color: #888888; font-size: 14px; line-height: 24px;}
-h1, h2, h3, h4, h5, h6{margin: 0;}
-h1{}
+h6{margin: -18px;}
+h1{margin: 0px;}
 h2{
-    padding-top: 10px;
+    padding-top:0px;
 }
 h3{}
 h4{}
 h5{}
 h6{}
-p{padding-bottom: 25px; margin: 0;}
+p{padding-bottom: 0px; margin: 30px;}
 .last{padding-bottom: 0;}
 .ruler{border-bottom: 1px solid #c9c9c9;}
 .img-spacing{margin-right: 30px; margin-bottom: 30px;}
@@ -154,7 +154,7 @@ p{padding-bottom: 25px; margin: 0;}
 /************************************************
 	generic styles starts here
  ************************************************/
-.featured-block{padding:55px 0; overflow: hidden;}
+.featured-block{padding:55px 0; overflow: scroll;}
 .featured-block .block{}
 .featured-block .block .thumbnail{box-shadow: 0 3px 3px 0 #e0e0e0;}
 .featured-block .caption{padding: 25px 15px;}

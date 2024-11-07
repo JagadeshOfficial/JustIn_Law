@@ -6,77 +6,43 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>JustIn Law</title>
+    <title>Law Mine</title>
 
-     <!-- Bootstrap core CSS -->
-     <link href="css/bootstrap.css" rel="stylesheet">
-     <link rel="stylesheet" href="css/normalize.css">
-     <link rel="stylesheet" href="css/component.css">
-     <link rel="stylesheet" href="css/custom-styles.css">
-     <link rel="stylesheet" href="css/font-awesome.css">
-     <link rel="stylesheet" href="css/demo.css">
-     <link rel="stylesheet" href="css/font-awesome-ie7.css">
-     <link rel="stylesheet" href="css/styles.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-     <style>
-         /* Header Styles */
- .header-wrapper {
-     position: fixed; /* Fix the header at the top */
-     top: 0;
-     left: 0;
-     width: 100%;
-     z-index: 1000; /* Keep the header above other content */
-     background-color: #d13434; /* Set background color to make header visible */
-     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for a better look */
-     padding: 20px 0;
- }
- 
- /* Navigation Menu Styles */
- .menu {
-     position: fixed; /* Fix the menu below the header */
-     top: 60px; /* Adjust the top value to be below the header */
-     left: 0;
-     width: 100%;
-     z-index: 999; /* Keep menu below header but above content */
-     
-     
- }
- 
- /* Footer Styles */
- .footer-wrapper {
-     position: fixed;
-     
-     
-     color: #fff;
-     padding: 10px 0;
-     text-align: center;
- }
- 
- /* Content Area Adjustments */
- body {
-     margin: 0;
-     padding-top: 120px; /* Ensure content starts below the fixed header and menu */
-     padding-bottom: 60px; /* Ensure content does not go under the footer */
-     overflow: hidden; /* Prevent the body from scrolling */
- }
- 
- .container > .navbar-header, .container > .navbar-collapse {
-     margin-right: 0;
-     margin-left: -50px;
- }
-     </style>
-  
-    
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/custom-styles.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="css/font-awesome-ie7.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" integrity="sha384-whateverYourIntegrityHashIs" crossorigin="anonymous">
+
+    <script>
+      $(document).ready(function(){
+        $('.menu').mobileMenu();
+      });
+    </script>
+    <style>
+
+
+  </style>
   </head>
 
   <body>
-    <!-- Header Section -->
-    <div class="header-wrapper">
-      <div class="site-name">
-        <h1>JustIn Law</h1>
-      </div>
+   <!-- Header Section -->
+   <div class="header-wrapper">
+    <div class="site-name" style="display: flex; align-items: center;">
+        <li style="list-style: none; margin-right: 10px;">
+            <a href="index.html" style="padding: 0; background: none; box-shadow: none;">
+                <img src="img/Logo.png" alt="Logo" class="scrolling-logo" style="height: 70px; background: transparent; box-shadow: none;">
+            </a>
+        </li>
+        <h1 class="scrolling-title" style="margin: 0;">Law Mine</h1>
     </div>
+</div>
+
 
     <!-- Navigation Menu -->
     <div class="menu">
@@ -85,7 +51,7 @@
           <div class="navbar-collapse">
             <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
+              <li><a href="about.html">About Us</a></li>
               
               <li>
                 <a href="javascript:void(0)" class="service-toggle" data-target="trialCourtServicesPanel">Trial Court Services/Cases</a>
@@ -102,7 +68,7 @@
                       <a>Civil Law</a>
                       <ul class="nested-sub-services">
                         <li><a href="Civil_Law.html">Junior Civil Judge Court Services</a></li>
-                        <li><a href="Civil_Law.html">Junior Civil Judge Court Services</a></li>
+                        <li><a href="Civil_Law.html">Senior Civil Judge Court Services</a></li>
                         <li><a href="Civil_Law.html">District Civil Judge Court Services</a></li>
                       </ul>
                     </li>
@@ -122,22 +88,87 @@
     </div>
 
 
-    <div class="container">
-      <div class="featured-block">
-                <!--<div class="heading-block">
-                    <h2>Hyderabad</h2>
-                </div>-->
-          
-        <!-- Example row of columns -->
+    <div class="custom-container">
+      <div class="custom-block">
+          <div class="custom-thumbnail">
+              <div class="custom-caption">
+                  <h1>Trail Court Cases</h1>
+                  <p>
+                      <b>1. Criminal Cases</b><br>
+                      1.1 Metropolitan Magistrate - JFCM<br>
+                      1.2 Metropolitan Sessions Court Services/Cases<br>
+                      <b>2. Civil Cases</b><br>
+                      2.1 Junior Civil Judge Court Services<br>
+                      2.2 Senior Civil Judge Court Services<br>
+                      2.3 District Civil Judge Court Services<br>
+                      <b>3. Family Cases</b>
+                  </p>
+              </div>
+          </div>
+      </div>
+      <div class="custom-block">
+          <div class="custom-thumbnail">
+              <div class="custom-caption">
+                  <h1>High Court Cases</h1>
+                  <p>
+                      1. Writ Petitions<br>
+                      2. Writ Appeals<br>
+                      3. Civil Revision Petitons<br>
+                      4. Criminal Revision Petitions<br>
+                      5. Civil Appeals<br>
+                      6. Criminal Appeals<br>
+                      7. Family Court Appeals<br>
+                      8. Company Case Appeals<br>
+                      9. Income Tax
+                  </p>
+              </div>
+          </div>
+      </div>
+      <div class="custom-block">
+          <div class="custom-thumbnail">
+              <div class="custom-caption">
+                  <h1>State Govt Tribunal Cases</h1>
+                  <p>
+                      1. State Co-Operative Tribunals<br>
+                      2. Labour Court Tribunals<br>
+                      3. State Administrative Tribunals<br>
+                      4. Endowment Tribunals<br>
+                      5. Election Tribunals<br>
+                      6. Income Tax Tribunals<br>
+                      7. Arbitration Tribunals<br>
+                      8. Land Revenue Tribunals
+                  </p>
+              </div>
+          </div>
+      </div>
+      <div class="custom-block">
+          <div class="custom-thumbnail">
+              <div class="custom-caption">
+                  <h1>Central Govt Tribunal Cases</h1>
+                  <p>
+                      1. National Company Law Tribunals<br>
+                      2. National Company Appeal Tribunals<br>
+                      3. Debt Recovery Tribunals<br>
+                      4. Debt Recovery Appeal Tribunals<br>
+                      5. National Green Tribunals<br>
+                      6. Central Administrative Tribunals<br>
+                      7. Arbitration Tribunals
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+        <!-- New row of blocks 
         <div class="row">
           <div class="col-md-3">
             <div class="block">
               <div class="thumbnail">
-                <img src="img/athik garu.png" alt="" class="img-responsive">
+                <img src="img/img5.jpg" alt="" class="img-responsive">
                 <div class="caption">
-                  <h1>Baskula Athik</h1>
-                  <p><b>Corporate  speclization (High Court)</b></p>
-                  
+                  <h1>Etiam ultricies</h1>
+                  <p>Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero.</p>
+                  <a class="btn" href="#">more</a>
                 </div>
               </div>
             </div>
@@ -145,68 +176,16 @@
           <div class="col-md-3">
             <div class="block">
               <div class="thumbnail">
-                <img src="img/saidulu garu.png" alt="" class="img-responsive">
+                <img src="img/img6.jpg" alt="" class="img-responsive">
                 <div class="caption">
-                  <h1>P SAIDULU</h1>
-                  <p><b>Criminal practice (High Court)</b></p>
-                  
+                  <h1>Sed magna purus</h1>
+                  <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada.</p>
+                  <a class="btn" href="#">more</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-3">
-            <div class="block">
-              <div class="thumbnail">
-                <img src="img/sapa naresh.png" alt="" class="img-responsive">
-                <div class="caption">
-                  <h1>Sapa  Naresh</h1>
-                  <p><b>Civil practice (High Court)</b></p>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="block">
-              <div class="thumbnail">
-                <img src="img/ravikumar.png" alt="" class="img-responsive">
-                <div class="caption">
-                  <h1>T Ravi Kumar</h1>
-                  <p><b>Legal Adviser (Immigration law)</b></p>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- New row of blocks -->
-        <div class="row">
-          <div class="col-md-3">
-            <div class="block">
-              <div class="thumbnail">
-                <img src="img/rajitha.png" alt="" class="img-responsive">
-                <div class="caption">
-                  <h1>M Rajitha</h1>
-                  <p><b>Legal consultant (Family Law, constitutional law)</b></p>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="block">
-              <div class="thumbnail">
-                <img src="img/bhargav.png" alt="" class="img-responsive">
-                <div class="caption">
-                  <h1>Bhargav</h1>
-                  <p><b>Legal Consultant (All cases)</b></p>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--<div class="col-md-3">
             <div class="block">
               <div class="thumbnail">
                 <img src="img/img6.jpg" alt="" class="img-responsive">
@@ -240,10 +219,10 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <!--<li><a href="#">Supreme Court Services</a></li>-->
-            <li><a href="team.html">Cases</a></li>
-            <li><a href="Advocate.html">Advocate</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="join_advocate.html">Join Advocate</a></li>
+            <li><a href="cases.html">Cases</a></li>
+                  <li><a href="OurTeam.html">Our Team</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="join_advocate.html">Join Our Team</a></li>
 
             <li>
               <a href="https://instagram.com" target="_blank">

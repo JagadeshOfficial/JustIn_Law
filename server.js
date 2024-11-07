@@ -9,9 +9,13 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Ensure the uploads directory exists
-if (!fs.existsSync('uploads/')) {
-    fs.mkdirSync('uploads/');
+// Log environment variables to ensure they are loaded correctly
+console.log('Environment Variables:', process.env);
+
+// Ensure the uploads directory exists (use absolute path for WebSpaceKit)
+const uploadsPath = path.join(__dirname, 'uploads');
+if (!fs.existsSync(uploadsPath)) {
+    fs.mkdirSync(uploadsPath);
 }
 
 // Set up middleware
@@ -22,24 +26,24 @@ app.use(express.json());
 // Set up multer for file uploads
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, 'uploads/'); // Save files to uploads directory
+        cb(null, uploadsPath); // Save files to uploads directory
     },
     filename: (req, file, cb) => {
-        cb(null, file.originalname); // Save file with its original name
+        cb(null, Date.now() + path.extname(file.originalname)); // Save file with timestamp and original extension
     }
 });
 
-const upload = multer({ storage: storage });
+const upload = multer({ 
+    storage: storage,
+    limits: { fileSize: 5 * 1024 * 1024 } // 5MB limit
+});
 
-// Serve static files like CSS from the root directory (css folder)
+// Serve static files (css, js, img)
 app.use('/css', express.static(path.join(__dirname, 'css')));
-
-// Serve images from the root directory (images folder)
 app.use('/img', express.static(path.join(__dirname, 'img')));
-// Serve static files (css, js, img) from the root directory
 app.use(express.static(path.join(__dirname))); // This serves all files in the root directory
 
-// Serve the HTML file and handle form submission in the same codebase
+// Serve the HTML file and handle form submission
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html')); // Serve the index.html from root directory
 });
@@ -49,7 +53,7 @@ app.post('/submit', upload.single('advocate_resume'), (req, res) => {
     const { advocate_name, advocate_phone, advocate_email, advocate_location, advocate_experience, advocate_specialized, advocate_enrollment, advocate_message } = req.body;
     const resume = req.file; // The uploaded file information
 
-    // Log the uploaded file information for debugging
+    console.log('Form data received:', req.body);
     console.log('Uploaded file:', resume);
 
     // Validate input fields
@@ -69,8 +73,8 @@ app.post('/submit', upload.single('advocate_resume'), (req, res) => {
 
     // Set up email data
     const mailOptions = {
-        from: `"JustIn Law" <${process.env.EMAIL_USER}>`,
-        to: advocate_email, // receiver email
+        from: `"Law Mine" <${process.env.EMAIL_USER}>`,
+        to: advocate_email, // Receiver email
         subject: 'New Advocate Submission',
         text: `Details of the advocate submission:\nName: ${advocate_name}\nPhone: ${advocate_phone}\nEmail: ${advocate_email}\nLocation: ${advocate_location}\nExperience: ${advocate_experience}\nSpecialized Cases: ${advocate_specialized}\nEnrollment No: ${advocate_enrollment}\nMessage: ${advocate_message}`,
         attachments: [
@@ -80,9 +84,6 @@ app.post('/submit', upload.single('advocate_resume'), (req, res) => {
             }
         ]
     };
-
-    // Log the attachment path for debugging
-    console.log('Resume path:', resume.path);
 
     // Send email
     transporter.sendMail(mailOptions, (error, info) => {
@@ -96,8 +97,8 @@ app.post('/submit', upload.single('advocate_resume'), (req, res) => {
 
     // Optional: Notify admin (adjust the email address as needed)
     const adminMailOptions = {
-        from: `"JustIn Law" <${process.env.EMAIL_USER}>`,
-        to: 'chat.judicial365@gmail.com', // Admin's email address
+        from: `"Law Mine" <${process.env.EMAIL_USER}>`,
+        to: 'admin@example.com', // Admin's email address
         subject: 'New Advocate Submission Received',
         text: `An advocate has submitted their details:\nName: ${advocate_name}\nPhone: ${advocate_phone}\nEmail: ${advocate_email}\nLocation: ${advocate_location}\nExperience: ${advocate_experience}\nSpecialized Cases: ${advocate_specialized}\nEnrollment No: ${advocate_enrollment}\nMessage: ${advocate_message}`
     };
@@ -109,6 +110,12 @@ app.post('/submit', upload.single('advocate_resume'), (req, res) => {
             console.log('Admin notified:', info.response);
         }
     });
+});
+
+// Error handling middleware (important for debugging in production)
+app.use((err, req, res, next) => {
+    console.error('Server error:', err);
+    res.status(500).send('Something went wrong!');
 });
 
 // Start the server

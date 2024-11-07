@@ -319,7 +319,6 @@ html, body {
    /* Style for container to make it scrollable */
    .featured-block {
     max-height: 520px; /* Adjust as needed */
-    overflow: scroll;
     padding: 65px;
   }
 
@@ -390,14 +389,14 @@ font-weight: bold; /* Bold text */
  form {
  margin-top: 300px; /* Push form down slightly, adjust if needed */
  padding: 35px; /* Reduce padding inside the form */
- padding-left: 200px;
+ padding-left: 130px;
  border-radius: 5px;
  width: 100%; /* Adjust width for a more compact look */
  margin: -15px 8px; /* Center the form */
 }
 
 input, select, textarea {
- width: 50%;
+ width: 200%;
  height: 30px;
  padding: 0px; /* Reduced padding for form fields */
  margin: 0px 0; /* Reduced margin between fields */
@@ -734,6 +733,373 @@ textarea {
   animation: shake 1.0s ease-in-out infinite;
 }
 
+
+
+
+
+@keyframes scrollLeftToRight {
+  0% {
+  transform: translateX(-100%); /* Start off-screen to the left */
+}
+50% {
+  transform: translateX(100%); /* Move to the right edge */
+}
+100% {
+  transform: translateX(-100%); /* Return to the left edge */
+}
+}
+
+.header-wrapper {
+overflow: hidden; /* Hide overflow content */
+width: 100%; /* Full width of the container */
+white-space: nowrap; /* Prevent the text from wrapping */
+}
+
+.site-name {
+display: flex;
+align-items: center;
+position: absolute; /* Position content inside the container */
+animation: scrollLeftToRight 10s linear infinite; /* Scroll left to right with 10s duration */
+}
+
+.header-wrapper:hover .site-name {
+animation-play-state: paused; /* Pause on hover */
+}
+
+
+       /* Header Styles */
+       .header-wrapper {
+        position: fixed; /* Fix the header at the top */
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* Keep the header above other content */
+        background-color: #fafafa; /* Set background color to make header visible */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for a better look */
+        padding: 20px 0;
+    }
+    
+    /* Navigation Menu Styles */
+    .menu {
+        position: fixed; /* Fix the menu below the header */
+        top: 60px; /* Adjust the top value to be below the header */
+        left: 0;
+        width: 100%;
+        z-index: 999; /* Keep menu below header but above content */
+        
+        
+    }
+    
+    /* Footer Styles */
+    .footer-wrapper {
+        position: fixed;
+        
+        
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+    }
+    
+    /* Content Area Adjustments */
+    body {
+        margin: 0;
+        padding-top: 120px; /* Ensure content starts below the fixed header and menu */
+        padding-bottom: 60px; /* Ensure content does not go under the footer */
+        overflow: hidden; /* Prevent the body from scrolling */
+    }
+    
+    .container > .navbar-header, .container > .navbar-collapse {
+        margin-right: 0;
+        margin-left: -50px;
+    }
+    /* Header Styles */
+    .header-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: #fdfdfd;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px 0;
+  }
+
+  /* Navigation Menu Styles */
+  .menu {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+  }
+
+  /* Footer Styles */
+  .footer-wrapper {
+      position: fixed;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+  }
+
+  /* Content Area Adjustments */
+  body {
+      margin: 0;
+      padding-top: 120px;
+      padding-bottom: 60px;
+  }
+
+  /* Experience Section */
+  .experience-section {
+      padding: 20px;
+      background-color: #f9f9f9;
+  }
+
+  /* Experience section content */
+  .experience-section .content {
+      margin: 0 auto;
+      max-width: 1200px;
+      text-align: left;
+  }
+  
+
+  /* Image section adjustments */
+  .image-section {
+      padding-top: 10px;
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .image-section img {
+      max-width: 80%;
+      height: auto;
+  }
+
+  .experience-badge {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 24px;
+      font-weight: bold;
+  }
+
+  .container > .navbar-header, .container > .navbar-collapse {
+      margin-right: 0;
+      margin-left: -50px;
+  }
+
+
+/* Container styling to fit all blocks side by side */
+.custom-container {
+  display: flex;
+  gap: 10px; /* Adds space between each box */
+  overflow-x: hidden; /* Hides any horizontal scroll */
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #f0f0f0;
+}
+
+/* Block styling */
+.custom-block {
+  flex: 1; /* Each block takes equal space */
+  max-width: 330px; /* Adjusts the width of each box */
+  background-color: #ebcaca;
+  padding: 0px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px #428bca(0, 0, 0, 0.1);
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* Thumbnail styling */
+.custom-thumbnail {
+  padding: 15px;
+}
+
+/* Caption Styling */
+.custom-caption h1 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.custom-caption p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  
+}
+
+
+
+/* Footer Styles */
+.footer-wrapper {
+position: fixed;
+
+
+color: #fff;
+padding: 10px 0;
+text-align: center;
+}
+
+/* Content Area Adjustments */
+body {
+margin: 0;
+padding-top: 120px; /* Ensure content starts below the fixed header and menu */
+padding-bottom: 60px; /* Ensure content does not go under the footer */
+overflow: hidden; /* Prevent the body from scrolling */
+}
+
+
+
+/* Content Area Adjustments */
+body {
+  margin: 0;
+  padding-top: 120px; /* Ensure content starts below the fixed header and menu */
+  padding-bottom: 60px; /* Ensure content does not go under the footer */
+  overflow: hidden; /* Prevent the body from scrolling */
+}
+.container > .navbar-header, .container > .navbar-collapse {
+    margin-right: 0;
+    margin-left: -50px;
+}
+
+.contact-form .form-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+#contact-form {
+  flex: 1;
+  margin-right: 270px;
+}
+
+.contact-info {
+  flex: 1;
+  padding: 100px;
+  background-color: #f9f9f9; /* Optional styling */
+  border-radius: 5px;
+}
+
+/* Content Area Adjustments */
+body {
+  margin: 0;
+  padding-top: 120px; /* Ensure content starts below the fixed header and menu */
+  padding-bottom: 60px; /* Ensure content does not go under the footer */
+  overflow: hidden; /* Prevent the body from scrolling */
+}
+
+      .form-container {
+         
+  max-width: 755px;
+  margin: -10px 195px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -5px;
+}
+
+.form-group {
+  width: 48%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 5px 240px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+.form-group-message
+{
+  width: 520px;
+}
+
+
+ 
+/* Container for content */
+.custom-content-container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Featured block container */
+.custom-featured-block {
+  background-color: #e77f7f; /* Background color for the box */
+  padding: 130px;
+  border-radius: 10px; /* Optional: rounded corners for the box */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: box shadow */
+}
+
+/* Row to hold columns */
+.custom-row {
+  display: flex;
+  justify-content: space-between; /* Ensures items are in a row */
+  flex-wrap: nowrap; /* Prevent items from wrapping */
+  gap: 0; /* Remove the gap between items */
+}
+
+/* Each column */
+.custom-col {
+  width: 19%; /* Adjusted to make sure all items fit in one row */
+  box-sizing: border-box;
+}
+
+/* Block container for the image */
+.custom-block {
+  overflow: hidden;
+  background-color: #c2efeb; /* Optional: background for the blocks */
+  border-radius: 10px; /* Optional: rounded corners for individual blocks */
+  box-shadow: 0 2px 4px #14d1a2; /* Optional: small shadow for blocks */
+}
+
+/* Thumbnail styling */
+.custom-thumbnail {
+  padding: 0px; /* Padding around images */
+}
+
+/* Image responsive styling */
+.custom-img-responsive {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures the images fill the container and maintain aspect ratio */
+  display: block;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .custom-col {
+    width: 48%; /* 2 items per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-col {
+    width: 100%; /* 1 item per row on very small screens */
+  }
+}
 
 
 

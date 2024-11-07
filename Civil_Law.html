@@ -20,67 +20,22 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" integrity="sha384-whateverYourIntegrityHashIs" crossorigin="anonymous">
 
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
     <style>
-      /* Header Styles */
-.header-wrapper {
-  position: fixed; /* Fix the header at the top */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* Keep the header above other content */
-  background-color: #d13434; /* Set background color to make header visible */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for a better look */
-  padding: 20px 0;
-}
-
-/* Navigation Menu Styles */
-.menu {
-  position: fixed; /* Fix the menu below the header */
-  top: 60px; /* Adjust the top value to be below the header */
-  left: 0;
-  width: 100%;
-  z-index: 999; /* Keep menu below header but above content */
-  
-  
-}
-
-/* Footer Styles */
-.footer-wrapper {
-  position: fixed;
-  
-  
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
-}
-
-/* Content Area Adjustments */
-body {
-  margin: 0;
-  padding-top: 120px; /* Ensure content starts below the fixed header and menu */
-  padding-bottom: 60px; /* Ensure content does not go under the footer */
-  overflow: hidden; /* Prevent the body from scrolling */
-}
-.container > .navbar-header, .container > .navbar-collapse {
-    margin-right: 0;
-    margin-left: -50px;
-}
+ 
   </style>
   </head>
 
   <body>
-        <!-- Header Section -->
-<div class="header-wrapper">
-  <div class="site-name" style="display: flex; align-items: center;">
-      <li style="list-style: none; margin-right: 10px;">
-          <a href="index.html" style="padding: 0; background: none; box-shadow: none;">
-              <img src="img/Logo.png" alt="Logo" style="height: 70px; background: transparent; box-shadow: none;">
-          </a>
-      </li>
-      <h1 style="margin: 0;">Law Mine</h1>
-  </div>
+  <!-- Header Section -->
+  <div class="header-wrapper">
+    <div class="site-name" style="display: flex; align-items: center;">
+        <li style="list-style: none; margin-right: 10px;">
+            <a href="index.html" style="padding: 0; background: none; box-shadow: none;">
+                <img src="img/Logo.png" alt="Logo" class="scrolling-logo" style="height: 70px; background: transparent; box-shadow: none;">
+            </a>
+        </li>
+        <h1 class="scrolling-title" style="margin: 0;">Law Mine</h1>
+    </div>
 </div>
 
 
@@ -194,10 +149,10 @@ body {
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <!--<li><a href="#">Supreme Court Services</a></li>-->
-            <li><a href="team.html">Cases</a></li>
-            <li><a href="Advocate.html">Advocate</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="join_advocate.html">Join Advocate</a></li>
+            <li><a href="cases.html">Cases</a></li>
+                  <li><a href="OurTeam.html">Our Team</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="join_advocate.html">Join Our Team</a></li>
 
             <li>
               <a href="https://instagram.com" target="_blank">
