@@ -23,7 +23,152 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" integrity="sha384-whateverYourIntegrityHashIs" crossorigin="anonymous">
 
     <style>
-     
+/* Container for the entire form section */
+.form-container {
+    max-width: 700px;
+    margin: -15px 312px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Row container for grouping form fields */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 0px;
+}
+
+/* Individual form group styling */
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styling */
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Text input and select styling */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="file"],
+.form-group textarea {
+    padding: 3px;
+    font-size: 14px;
+    border: 3px solid #81a79d;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Focused input style */
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="file"]:focus,
+.form-group textarea:focus {
+    border-color: #34b091;
+    outline: none;
+}
+
+/* Styling specifically for the textarea */
+.form-group textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+/* Full width row styling for message box */
+.full-width .form-group-message {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.full-width textarea {
+    height: 100px;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #34b091;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2a9276;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    button[type="submit"] {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+/* Container for the message section */
+.message-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Styling for the message input field */
+.message-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+/* Label styling specifically for the message field */
+.message-field label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Textarea styling */
+.message-field textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 3px solid #81a79d;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+    height: 60px;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus effect for the textarea */
+.message-field textarea:focus {
+    border-color: #34b091;
+    outline: none;
+}
+
+
  
     </style>
 </head>
@@ -82,7 +227,7 @@
     </div>
 <!-- Form Section -->
 <div class="form-container">
-    <h1>Join Advocate</h1>
+    <!--<h1>Join Advocate</h1>-->
     <form id="advocateForm" action="/submit" method="POST" enctype="multipart/form-data">
         <div class="form-row">
             <div class="form-group">
@@ -124,12 +269,13 @@
                 <input type="file" id="advocateResume" name="advocate_resume" accept=".pdf" required>
             </div>
         </div>
-        <div class="form-row full-width">
-            <div class="form-group-message">
-                <label for="advocateMessage">Message:</label>
-                <textarea id="advocateMessage" name="advocate_message" rows="4" required></textarea>
+        <div class="message-section">
+            <div class="message-field">
+                <label for="advocateNote">Your Message:</label>
+                <textarea id="advocateNote" name="advocate_note" rows="4" required></textarea>
             </div>
         </div>
+        
         <button type="submit">Submit</button>
     </form>
     
@@ -150,32 +296,32 @@
                     <li><a href="join_advocate.html">Join Our Team</a></li>
 
                     <li>
-                        <a href="https://instagram.com" target="_blank">
+                        <a href="https://www.instagram.com/legalmine.in/?utm_source=qr#" target="_blank">
                             <i class="fa fa-instagram" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://twitter.com" target="_blank">
+                        <a href="https://x.com/Lawmine_in" target="_blank">
                             <i class="fa fa-twitter" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://facebook.com" target="_blank">
+                        <a href="https://www.facebook.com/profile.php?id=61568315652938" target="_blank">
                             <i class="fa fa-facebook" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://youtube.com" target="_blank">
+                        <a href="https://www.youtube.com/@Legalmine" target="_blank">
                             <i class="fa fa-youtube" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://threads.net" target="_blank">
+                        <a href="https://www.threads.net/@legalmine.in" target="_blank">
                             <img src="img/icons8-threads-48.png" alt="Threads Icon" style="width: 16px; height: 16px;"> <!-- Replace with actual Threads icon if available -->
                         </a>
                     </li>
                     <li>
-                        <a href="https://linkedin.com" target="_blank">
+                        <a href="https://www.linkedin.com/in/law-mine-904351338?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bldx8gJhrTrqo5%2F4h0tppyA%3D%3D" target="_blank">
                             <i class="fa fa-linkedin" aria-hidden="true"></i>
                         </a>
                     </li>

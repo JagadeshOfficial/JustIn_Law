@@ -388,8 +388,8 @@ font-weight: bold; /* Bold text */
    }
  form {
  margin-top: 300px; /* Push form down slightly, adjust if needed */
- padding: 35px; /* Reduce padding inside the form */
- padding-left: 130px;
+ padding: 40px; /* Reduce padding inside the form */
+ padding-left: 30px;
  border-radius: 5px;
  width: 100%; /* Adjust width for a more compact look */
  margin: -15px 8px; /* Center the form */
@@ -991,14 +991,10 @@ body {
       .form-container {
          
   max-width: 755px;
-  margin: -10px 195px;
+  margin: 0px 240px;
 }
 
-.form-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: -5px;
-}
+
 
 .form-group {
   width: 48%;
@@ -1015,14 +1011,14 @@ label {
 }
 
 input, textarea {
-  width: 100%;
+  width: 200%;
   padding: 0px;
   box-sizing: border-box;
 }
 
 button {
-  padding: 5px 240px;
-  background-color: #4CAF50;
+  padding: 10px 237px;
+  background-color: #81a79d;
   color: white;
   border: none;
   cursor: pointer;
