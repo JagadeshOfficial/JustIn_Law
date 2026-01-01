@@ -1,293 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title>Law Mine</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Law Mine</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/component.css">
-    <link rel="stylesheet" href="css/custom-styles.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/demo.css">
-    <link rel="stylesheet" href="css/font-awesome-ie7.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" integrity="sha384-whateverYourIntegrityHashIs" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script>
-      $(document).ready(function(){
-        $('.menu').mobileMenu();
-      });
-    </script>
-    <style>
-input[type="submit"] {
-    background-color:  #34b091; /* Background color */
-    color: #fff; /* Text color */
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+  <!-- EmailJS -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
-input[type="submit"]:hover {
-    background-color: #2a9276; /* Darker shade on hover */
-}
+  <!-- Main Style -->
+  <link rel="stylesheet" href="style.css">
 
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 60px;
+      align-items: start;
+    }
 
+    .contact-info-panel h3 {
+      font-size: 1.5rem;
+      margin-bottom: 25px;
+      color: #fff;
+    }
 
+    .info-item {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .info-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid var(--gold-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-primary);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .info-content h4 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+
+    .info-content p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
-  </head>
+</head>
 
-  <body>
- <!-- Header Section -->
- <div class="header-wrapper">
-  <div class="site-name" style="display: flex; align-items: center;">
-      <li style="list-style: none; margin-right: 10px;">
-          <a href="index.html" style="padding: 0; background: none; box-shadow: none;">
-              <img src="img/Logo.png" alt="Logo" class="scrolling-logo" style="height: 70px; background: transparent; box-shadow: none;">
-          </a>
-      </li>
-      <h1 class="scrolling-title" style="margin: 0;">Law Mine</h1>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-info">
+        <span><i class="fa fa-envelope"></i> contact@lawmine.in</span>
+        <span><i class="fa fa-clock-o"></i> Mon - Sat: 9:00 - 19:00</span>
+      </div>
+      <div class="top-socials">
+        <span><i class="fa fa-map-marker"></i> Hyderabad, India</span>
+      </div>
+    </div>
   </div>
-</div>
+
+  <!-- MAIN HEADER -->
+  <header id="main-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo-container">
+        <img src="img/lawmine_premium_logo.jpg" alt="Law Mine Logo" class="logo-img">
+
+      </a>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About Firm</a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Practice Areas <i class="fa fa-angle-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="Criminal_Law.html" class="dropdown-item">Criminal Defense</a></li>
+            <li><a href="Civil_Law.html" class="dropdown-item">Civil Litigation</a></li>
+            <li><a href="Family_Law.html" class="dropdown-item">Family Law</a></li>
+            <li><a href="state-govt.html" class="dropdown-item">State Tribunals</a></li>
+            <li><a href="central-govt.html" class="dropdown-item">Central Tribunals</a></li>
+            <li><a href="highcourt.html" class="dropdown-item">High Court Matters</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="OurTeam.html" class="nav-link">Our Team</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+
+      <div style="display: flex; gap: 20px; align-items: center;">
+        <a href="contact.html" class="btn btn-gold header-btn"
+          style="display: none; @media(min-width: 1024px){display: inline-flex;}">Consultation</a>
+        <div class="menu-toggle" id="mobile-menu-btn"><i class="fa fa-bars"></i></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div class="nav-drawer" id="mobile-drawer">
+    <div style="text-align: right; margin-bottom: 30px;">
+      <i class="fa fa-times" id="close-drawer"
+        style="font-size: 2rem; color: var(--gold-primary); cursor: pointer;"></i>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="cases.html">Services</a>
+      <a href="highcourt.html">High Court</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero" style="min-height: 50vh; height: auto;">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content text-center" style="padding-top: 80px; padding-bottom: 80px;">
+      <h1 class="hero-title">Get in <span class="text-gold">Touch</span></h1>
+      <p class="hero-subtitle" style="margin: 0 auto; border: none; padding: 0;">We are here to provide expert legal
+        counsel when you need it most.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT CONTENT -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Left Info Panel -->
+        <div class="contact-info-panel">
+          <h3>Contact Information</h3>
+          <p style="color: var(--text-muted); margin-bottom: 40px;">Feel free to reach out to us for any inquiries or
+            legal assistance. Our dedicated team is available to support you.</p>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa fa-map-marker"></i></div>
+            <div class="info-content">
+              <h4>Head Office</h4>
+              <p>Legal Ridge Solutions LLP, Unit no. 504- 511, 5th Floor, Shanta Shriram Tech Park, S.no. - 126, behind
+                PSR Prime Tower, adjacent to DLF Cyber City, Gachibowli, Hyderabad, Telangana 500032.</p>
+            </div>
+          </div>
 
 
-    <!-- Navigation Menu -->
-    <div class="menu">
-      <div class="navbar">
-        <div class="container">
-          <div class="navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li>
-                <a href="javascript:void(0)" class="service-toggle" data-target="trialCourtServicesPanel">Trial Court Services/Cases</a>
-                <div class="sub-services-panel" id="trialCourtServicesPanel">
-                  <ul class="sub-services">
-                    <li>
-                      <a>Criminal Law</a>
-                      <ul class="nested-sub-services">
-                        <li><a href="Criminal_Law.html">Metropolitan Magistrate - JFCM</a></li>
-                        <li><a href="Criminal_Law.html">Metropolitan Sessions Court Services/Cases</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a>Civil Law</a>
-                      <ul class="nested-sub-services">
-                        <li><a href="Civil_Law.html">Junior Civil Judge Court Services</a></li>
-                        <li><a href="Civil_Law.html">District Civil Judge Court Services</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="Family_Law.html">Family Law</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li><a href="highcourt.html">High Court Services/Cases</a></li>
-              <li><a href="state-govt.html">State Govt Tribunal Services/Cases</a></li>
-              <li><a href="central-govt.html">Central Govt Tribunal Services/Cases</a></li>
-              <li><a href="competitive-authority.html">Competitive Authority/Commissions/Forums</a></li>
-            </ul>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa fa-envelope"></i></div>
+            <div class="info-content">
+              <h4>Email Us</h4>
+              <p>contact@lawmine.in</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa fa-clock-o"></i></div>
+            <div class="info-content">
+              <h4>Working Hours</h4>
+              <p>Mon - Sat: 9:00 AM - 7:00 PM<br>Sunday: Closed</p>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Main content - Contact Form -->
-<section class="contact-form">
-  <div class="container-form">
-    <h1 class="contact-title">
-      <span class="contact">CONTACT</span>
-      <span class="us">US</span>
-    </h1>
-    
-    <div class="form-content">
-      <!-- Left Side: Contact Form -->
-      <form id="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <!-- Right Form Panel -->
+        <div class="glass-panel" style="padding: 50px;">
+          <h3 style="margin-bottom: 30px;">Send a Message</h3>
+          <form id="contactForm">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+              <div>
+                <label style="display: block; margin-bottom: 8px; color: var(--text-muted); font-size: 0.9rem;">Your
+                  Name</label>
+                <input type="text" name="user_name" class="form-input" required>
+              </div>
+              <div>
+                <label style="display: block; margin-bottom: 8px; color: var(--text-muted); font-size: 0.9rem;">Your
+                  Phone</label>
+                <input type="text" name="user_phone" class="form-input" required>
+              </div>
+            </div>
 
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required>
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; margin-bottom: 8px; color: var(--text-muted); font-size: 0.9rem;">Email
+                Address</label>
+              <input type="email" name="user_email" class="form-input" required>
+            </div>
 
-        <label for="location">Location:</label>
-        <input type="text" id="location" name="location" required>
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; margin-bottom: 8px; color: var(--text-muted); font-size: 0.9rem;">Case
+                Subject</label>
+              <select name="case_type" class="form-input" style="cursor: pointer;">
+                <option value="" style="color: #000;">Select Practice Area</option>
+                <option value="Criminal Defense" style="color: #000;">Criminal Defense</option>
+                <option value="Civil Litigation" style="color: #000;">Civil Litigation</option>
+                <option value="Family Law" style="color: #000;">Family Law</option>
+                <option value="Corporate Law" style="color: #000;">Corporate Law</option>
+                <option value="Other" style="color: #000;">Other</option>
+              </select>
+            </div>
 
-        <label for="case">Type of Case:</label>
-        <select id="case" name="case" required>
-          <option value="">Select a case type</option>
-          <option value="criminal">Criminal Law</option>
-          <option value="civil">Civil Law</option>
-          <option value="family">Family Law</option>
-          <option value="property">Property Law</option>
-          <option value="employment">Employment Law</option>
-          <option value="contract">Contract Law</option>
-          <option value="corporate">Corporate Law</option>
-          <option value="constitutional">Constitutional Law</option>
-          <option value="administrative">Administrative Law</option>
-          <option value="tax">Tax Law</option>
-          <option value="banking">Banking Law</option>
-          <option value="environmental">Environmental Law</option>
-          <option value="consumer">Consumer Law</option>
-          <option value="intellectual">Intellectual Property</option>
-          <option value="international">International Law</option>
-          <option value="land">Land Disputes</option>
-          <option value="land">Others</option>
-        </select>
+            <div style="margin-bottom: 30px;">
+              <label style="display: block; margin-bottom: 8px; color: var(--text-muted); font-size: 0.9rem;">Message
+                Details</label>
+              <textarea name="message" rows="5" class="form-textarea" required></textarea>
+            </div>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-
-        <input type="submit" value="Submit">
-      </form>
-
-      <!-- Right Side: Contact Information -->
-      <div class="contact-info">
-        <h2><b>Contact Information</b></h2>
-        <p><strong>Address:</strong>Phase 2, TNGO colony , Financial district, Gachibowli, Hyderabad</p>
-        <p><strong>Email:</strong> legalmine.in@yahoo.com</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <!-- Footer Section -->
-    <div class="footer-wrapper">
-      <div class="container">
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <!--<li><a href="#">Supreme Court Services</a></li>-->
-            <li><a href="cases.html">Cases</a></li>
-                  <li><a href="OurTeam.html">Our Team</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                  <li><a href="join_advocate.html">Join Our Team</a></li>
-                  <li>
-                    <a href="https://www.instagram.com/legalmine.in/?utm_source=qr#" target="_blank">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://x.com/Lawmine_in" target="_blank">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/profile.php?id=61568315652938" target="_blank">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/@Legalmine" target="_blank">
-                        <i class="fa fa-youtube" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.threads.net/@legalmine.in" target="_blank">
-                        <img src="img/icons8-threads-48.png" alt="Threads Icon" style="width: 16px; height: 16px;"> <!-- Replace with actual Threads icon if available -->
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/law-mine-904351338?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bldx8gJhrTrqo5%2F4h0tppyA%3D%3D" target="_blank">
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                </li>          </ul>
+            <button type="submit" class="btn btn-gold" style="width: 100%;">Send Message</button>
+          </form>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="js/jquery-1.9.1.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#" class="logo-container">
+          <img src="img/lawmine_premium_logo.jpg" alt="Logo" class="logo-img">
 
-    <script>
-     /* // Initialize EmailJS
-      (function(){
-        emailjs.init("E3vX1fIeK8cEmxL6Z"); // Replace with your EmailJS user ID
-      })();
+        </a>
+        <p>The premier advocate assistance portal. Research, drafting, and representation across all levels of the
+          Indian Judiciary. Since 2014.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your Email Address" class="newsletter-input">
+          <button class="newsletter-btn">JOIN</button>
+        </form>
+      </div>
 
-      // Form submission handler
-      document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission behavior
+      <div class="footer-col footer-links">
+        <h4>Firm</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="cases.html">Practice Areas</a></li>
+          <li><a href="OurTeam.html">Our Attorneys</a></li>
+          <li><a href="join_advocate.html">Careers</a></li>
+        </ul>
+      </div>
 
-        // Prepare the form data
-        const formData = new FormData(this);
+      <div class="footer-col footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="Criminal_Law.html">Criminal Defense</a></li>
+          <li><a href="Civil_Law.html">Civil Litigation</a></li>
+          <li><a href="Family_Law.html">Family Law</a></li>
+          <li><a href="highcourt.html">High Court</a></li>
+        </ul>
+      </div>
 
-        // Send email using EmailJS
-        emailjs.sendForm('service_ksip6qr', 'template_bp4ewhi', this)
-          .then(function(response) {
-            console.log('SUCCESS!', response.status, response.text);
-            alert('Your message has been sent successfully!');
-            document.getElementById('contact-form').reset(); // Reset the form after successful submission
-          }, function(error) {
-            console.log('FAILED...', error);
-            alert('Oops! Something went wrong. Please try again.');
-          });
-      });*/
+      <div class="footer-col contact-info">
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fa fa-map-marker"></i><span>Legal Ridge Solutions LLP, Unit no. 504- 511, 5th Floor, Shanta
+              Shriram Tech Park, S.no. - 126, behind PSR Prime Tower, adjacent to DLF Cyber City, Gachibowli, Hyderabad,
+              Telangana 500032.</span></li>
+          <li><i class="fa fa-envelope"></i><span>contact@lawmine.in</span></li>
+        </ul>
+      </div>
+    </div>
 
-  // Initialize EmailJS
-  (function(){
-    emailjs.init("E3vX1fIeK8cEmxL6Z"); // Replace with your EmailJS user ID
-  })();
+    <div class="container footer-bottom">
+      <div class="copyright">&copy; 2025 Law Mine Legal Services. All Rights Reserved.</div>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/lawmine.in/?utm_source=qr#" target="_blank"><i
+            class="fa fa-instagram"></i></a>
+        <a href="https://x.com/Lawmine_in_2025" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61568315652938" target="_blank"><i
+            class="fa fa-facebook"></i></a>
+        <a href="https://www.youtube.com/@lawmine.in365" target="_blank"><i class="fa fa-youtube"></i></a>
+        <a href="https://www.linkedin.com/in/law-mine-578b52339" target="_blank"><i class="fa fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
 
-  // Function to prepare WhatsApp message
-  function sendWhatsAppMessage(formData) {
-    const phone = formData.get('phone');
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const location = formData.get('location');
-    const caseType = formData.get('case');
-    const message = formData.get('message');
+  <script>
+    // Sticky Header & Scroll Effects
+    window.addEventListener('scroll', function () {
+      const header = document.getElementById('main-header');
+      if (window.scrollY > 50) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
 
-    const whatsappMessage = `Hello, my name is ${name}. I would like to discuss a ${caseType} case. Here are my details:\n\n- Name: ${name}\n- Email: ${email}\n- Phone: ${phone}\n- Location: ${location}\n- Message: ${message}`;
+    // Mobile Drawer
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const closeDrawer = document.getElementById('close-drawer');
+    const drawer = document.getElementById('mobile-drawer');
 
-    // WhatsApp Click-to-Chat URL (replace with your WhatsApp number)
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=918790055638&text=${encodeURIComponent(whatsappMessage)}`;
+    mobileBtn.addEventListener('click', () => drawer.classList.add('active'));
+    closeDrawer.addEventListener('click', () => drawer.classList.remove('active'));
 
-    // Redirect to WhatsApp with the message (user must click send in WhatsApp)
-    window.open(whatsappUrl, '_blank');
-  }
+    // EmailJS
+    (function () {
+      emailjs.init("SulfzMHQGRzjcfZIX");
+    })();
 
-  // Form submission handler
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission behavior
+    // WhatsApp Custom Function
+    function sendWhatsAppMessage(formData) {
+      const name = formData.get('user_name');
+      const phone = formData.get('user_phone');
+      const email = formData.get('user_email');
+      const caseType = formData.get('case_type');
+      const message = formData.get('message');
 
-    // Prepare the form data
-    const formData = new FormData(this);
+      const whatsappMessage = `Hello, I would like to consult.\n\n- Name: ${name}\n- Phone: ${phone}\n- Email: ${email}\n- Case Type: ${caseType}\n- Message: ${message}`;
+      const whatsappUrl = `https://api.whatsapp.com/send?phone=917396436052&text=${encodeURIComponent(whatsappMessage)}`;
+      window.open(whatsappUrl, '_blank');
+    }
 
-    // Send email using EmailJS
-    emailjs.sendForm('service_ksip6qr', 'template_bp4ewhi', this)
-      .then(function(response) {
-        console.log('SUCCESS!', response.status, response.text);
-        alert('Your message has been sent successfully via email!');
+    // Form Submission
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const formData = new FormData(this);
 
-        // Send WhatsApp message automatically
-        sendWhatsAppMessage(formData);
+      emailjs.sendForm('service_shir3pm', 'template_9vcnoo2', this)
+        .then(function (response) {
+          alert('Thank you! Your message has been sent successfully.');
+          document.getElementById('contactForm').reset();
+          sendWhatsAppMessage(formData);
+        }, function (error) {
+          alert('Oops! Something went wrong. Please try again later.');
+          console.error('FAILED...', error);
+        });
+    });
+  </script>
+</body>
 
-        // Reset the form after successful submission
-        document.getElementById('contact-form').reset();
-      }, function(error) {
-        console.log('FAILED...', error);
-        alert('Oops! Something went wrong with the email submission. Please try again.');
-      });
-  });
-
-
-    </script>
-  </body>
 </html>

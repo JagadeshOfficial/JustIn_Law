@@ -1,185 +1,611 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title>JustIn Law</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Team | Law Mine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+    }
 
-     <!-- Bootstrap core CSS -->
-     <link href="css/bootstrap.css" rel="stylesheet">
-     <link rel="stylesheet" href="css/normalize.css">
-     <link rel="stylesheet" href="css/component.css">
-     <link rel="stylesheet" href="css/custom-styles.css">
-     <link rel="stylesheet" href="css/font-awesome.css">
-     <link rel="stylesheet" href="css/demo.css">
-     <link rel="stylesheet" href="css/font-awesome-ie7.css">
-     <link rel="stylesheet" href="css/styles.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-     <style>
-  
+    .team-card {
+      background: var(--secondary-bg);
+      border: 1px solid var(--glass-border);
+      text-align: center;
+      padding: 40px 20px;
+      transition: 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
 
-     </style>
-  
-    
-  </head>
+    .team-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--gold-primary);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
 
-  <body>
-    <!-- Header Section -->
-    <div class="header-wrapper">
-      <div class="site-name" style="display: flex; align-items: center;">
-          <li style="list-style: none; margin-right: 10px;">
-              <a href="index.html" style="padding: 0; background: none; box-shadow: none;">
-                  <img src="img/Logo.png" alt="Logo" class="scrolling-logo" style="height: 70px; background: transparent; box-shadow: none;">
-              </a>
-          </li>
-          <h1 class="scrolling-title" style="margin: 0;">Law Mine</h1>
+    .member-img-wrapper {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 25px;
+      border-radius: 50%;
+      padding: 5px;
+      border: 2px solid var(--gold-primary);
+      /* Gold border around image */
+    }
+
+    .member-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      filter: grayscale(100%);
+      transition: 0.4s;
+    }
+
+    .team-card:hover .member-img {
+      filter: grayscale(0%);
+    }
+
+    .member-name {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+      color: #fff;
+    }
+
+    .member-role {
+      color: var(--gold-primary);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .member-bio {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+
+    .member-socials a {
+      color: var(--text-muted);
+      margin: 0 10px;
+      font-size: 1.1rem;
+      transition: 0.3s;
+    }
+
+    .member-socials a:hover {
+      color: var(--gold-primary);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-info">
+        <span><i class="fa fa-envelope"></i> contact@lawmine.in</span>
+        <span><i class="fa fa-clock-o"></i> Mon - Sat: 9:00 - 19:00</span>
       </div>
+      <div class="top-socials">
+        <span><i class="fa fa-map-marker"></i> Hyderabad, India</span>
+      </div>
+    </div>
   </div>
 
-    <!-- Navigation Menu -->
-    <div class="menu">
-      <div class="navbar">
-        <div class="container">
-          <div class="navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              
-              <li>
-                <a href="javascript:void(0)" class="service-toggle" data-target="trialCourtServicesPanel">Trial Court Services/Cases</a>
-                <div class="sub-services-panel" id="trialCourtServicesPanel">
-                  <ul class="sub-services">
-                    <li>
-                    <a>Criminal Law</a>
-                      <ul class="nested-sub-services">
-                        <li><a href="Criminal_Law.html">Metropolitan Magistrate - JFCM</a></li>
-                        <li><a href="Criminal_Law.html">Metropolitan Sessions Court Services/Cases</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a>Civil Law</a>
-                      <ul class="nested-sub-services">
-                        <li><a href="Civil_Law.html">Junior Civil Judge Court Services</a></li>
-                        <li><a href="Civil_Law.html">Junior Civil Judge Court Services</a></li>
-                        <li><a href="Civil_Law.html">District Civil Judge Court Services</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="Family_Law.html">Family Law</a></li>
+  <!-- MAIN HEADER -->
+  <header id="main-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo-container">
+        <img src="img/lawmine_premium_logo.jpg" alt="Law Mine Logo" class="logo-img">
 
-                  </ul>
-                </div>
-              </li>
-              <li><a href="highcourt.html">High Court Services/Cases</a></li>
-              <li><a href="state-govt.html">State Govt Tribunal Services/Cases</a></li>
-              <li><a href="central-govt.html">Central Govt Tribunal Services/Cases</a></li>
-              <li><a href="competitive-authority.html">Competitive Authority/Commissions/Forums</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+      </a>
 
-
-    <div class="custom-content-container">
-      <div class="custom-featured-block">
-        <!-- Example row of columns -->
-        <div class="custom-row">
-          <div class="custom-col">
-            <div class="custom-block">
-              <div class="custom-thumbnail">
-                <img src="img/athik garu.png" alt="" class="custom-img-responsive">
-              </div>
-            </div>
-          </div>
-          <div class="custom-col">
-            <div class="custom-block">
-              <div class="custom-thumbnail">
-                <img src="img/saidulu garu.png" alt="" class="custom-img-responsive">
-              </div>
-            </div>
-          </div>
-          <div class="custom-col">
-            <div class="custom-block">
-              <div class="custom-thumbnail">
-                <img src="img/ravikumar.png" alt="" class="custom-img-responsive">
-              </div>
-            </div>
-          </div>
-          <div class="custom-col">
-            <div class="custom-block">
-              <div class="custom-thumbnail">
-                <img src="img/rajitha.png" alt="" class="custom-img-responsive">
-              </div>
-            </div>
-          </div>
-          <div class="custom-col">
-            <div class="custom-block">
-              <div class="custom-thumbnail">
-                <img src="img/bhargav.png" alt="" class="custom-img-responsive">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    
-
-
-    <!-- Footer Section -->
-    <div class="footer-wrapper">
-      <div class="container">
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <!--<li><a href="#">Supreme Court Services</a></li>-->
-            <li><a href="cases.html">Cases</a></li>
-            <li><a href="OurTeam.html">Our Team</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="join_advocate.html">Join Our Team</a></li>
-
-            <li>
-              <a href="https://www.instagram.com/legalmine.in/?utm_source=qr#" target="_blank">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-          </li>
-          <li>
-              <a href="https://x.com/Lawmine_in" target="_blank">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-          </li>
-          <li>
-              <a href="https://www.facebook.com/profile.php?id=61568315652938" target="_blank">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-          </li>
-          <li>
-              <a href="https://www.youtube.com/@Legalmine" target="_blank">
-                  <i class="fa fa-youtube" aria-hidden="true"></i>
-              </a>
-          </li>
-          <li>
-              <a href="https://www.threads.net/@legalmine.in" target="_blank">
-                  <img src="img/icons8-threads-48.png" alt="Threads Icon" style="width: 16px; height: 16px;"> <!-- Replace with actual Threads icon if available -->
-              </a>
-          </li>
-          <li>
-              <a href="https://www.linkedin.com/in/law-mine-904351338?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bldx8gJhrTrqo5%2F4h0tppyA%3D%3D" target="_blank">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-          </li>
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About Firm</a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Practice Areas <i class="fa fa-angle-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="Criminal_Law.html" class="dropdown-item">Criminal Defense</a></li>
+            <li><a href="Civil_Law.html" class="dropdown-item">Civil Litigation</a></li>
+            <li><a href="Family_Law.html" class="dropdown-item">Family Law</a></li>
+            <li><a href="state-govt.html" class="dropdown-item">State Tribunals</a></li>
+            <li><a href="central-govt.html" class="dropdown-item">Central Tribunals</a></li>
+            <li><a href="highcourt.html" class="dropdown-item">High Court Matters</a></li>
           </ul>
+        </li>
+        <li class="nav-item"><a href="OurTeam.html" class="nav-link active">Our Team</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div style="display: flex; gap: 20px; align-items: center;">
+        <a href="contact.html" class="btn btn-gold header-btn"
+          style="display: none; @media(min-width: 1024px){display: inline-flex;}">Consultation</a>
+        <div class="menu-toggle" id="mobile-menu-btn"><i class="fa fa-bars"></i></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div class="nav-drawer" id="mobile-drawer">
+    <div style="text-align: right; margin-bottom: 30px;">
+      <i class="fa fa-times" id="close-drawer"
+        style="font-size: 2rem; color: var(--gold-primary); cursor: pointer;"></i>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="cases.html">Services</a>
+      <a href="highcourt.html">High Court</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero-team">
+    <div class="container text-center" style="position: relative; z-index: 2;">
+      <h1 class="hero-title">Meet The <span class="text-gold">Legal Minds</span></h1>
+      <p class="hero-subtitle" style="margin: 0 auto; max-width: 600px;">
+        Architects of Justice. Defenders of Rights. An elite ensemble of India's finest legal practitioners dedicated to
+        your victory.
+      </p>
+    </div>
+  </section>
+
+  <!-- TEAM GRID -->
+  <!-- TEAM GRID -->
+  <section class="section-padding"
+    style="background: radial-gradient(circle at 50% 10%, #0f1f33 0%, var(--primary-bg) 60%);">
+    <div class="container">
+      <div class="premium-team-grid">
+
+        <!-- 1. Athik Garu -->
+        <div class="team-card-premium">
+          <div class="expertise-badge"><i class="fa fa-gavel"></i> Senior Counsel</div>
+          <div class="team-img-container">
+            <img src="img/athik garu.png" class="team-img" alt="Athik Garu">
+            <div class="team-overlay"></div>
+          </div>
+          <div class="team-info">
+            <span class="team-role">Senior Advocate</span>
+            <h3 class="team-name">Athik Garu</h3>
+            <p class="team-bio">Distinguished legal expert with extensive experience in high-profile litigation and
+              constitutional matters.</p>
+            <div class="team-socials">
+              <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
+              <a href="#" class="social-link"><i class="fa fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Saidulu Garu -->
+        <div class="team-card-premium">
+          <div class="expertise-badge"><i class="fa fa-university"></i> Constitutional</div>
+          <div class="team-img-container">
+            <img src="img/saidulu garu.png" class="team-img" alt="Saidulu Garu">
+            <div class="team-overlay"></div>
+          </div>
+          <div class="team-info">
+            <span class="team-role">Head of Litigation</span>
+            <h3 class="team-name">Saidulu Garu</h3>
+            <p class="team-bio">A pillar of the firm, specializing in complex civil disputes and administrative
+              tribunals.</p>
+            <div class="team-socials">
+              <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
+              <a href="#" class="social-link"><i class="fa fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Ravi Kumar -->
+        <div class="team-card-premium">
+          <div class="expertise-badge"><i class="fa fa-building"></i> Corporate</div>
+          <div class="team-img-container">
+            <img src="img/ravikumar.png" class="team-img" alt="Ravi Kumar">
+            <div class="team-overlay"></div>
+          </div>
+          <div class="team-info">
+            <span class="team-role">Corporate Counsel</span>
+            <h3 class="team-name">Ravi Kumar</h3>
+            <p class="team-bio">Expert in corporate restructuring, NCLT proceedings, and commercial arbitration.</p>
+            <div class="team-socials">
+              <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
+              <a href="#" class="social-link"><i class="fa fa-globe"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Rajitha -->
+        <div class="team-card-premium">
+          <div class="expertise-badge"><i class="fa fa-users"></i> Family Law</div>
+          <div class="team-img-container">
+            <img src="img/rajitha.png" class="team-img" alt="Rajitha">
+            <div class="team-overlay"></div>
+          </div>
+          <div class="team-info">
+            <span class="team-role">Family Law Specialist</span>
+            <h3 class="team-name">Rajitha</h3>
+            <p class="team-bio">Compassionate representation in matrimonial disputes, custody cases, and family
+              settlements.</p>
+            <div class="team-socials">
+              <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
+              <a href="#" class="social-link"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Sapa Naresh -->
+        <div class="team-card-premium">
+          <div class="expertise-badge"><i class="fa fa-balance-scale"></i> Civil & Criminal</div>
+          <div class="team-img-container">
+            <img src="img/sapa naresh.png" class="team-img" alt="Sapa Naresh">
+            <div class="team-overlay"></div>
+          </div>
+          <div class="team-info">
+            <span class="team-role">Associate Partner</span>
+            <h3 class="team-name">Sapa Naresh</h3>
+            <p class="team-bio">Versatile advocate handling a broad spectrum of civil and criminal defense cases with
+              precision.</p>
+            <div class="team-socials">
+              <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
+              <a href="#" class="social-link"><i class="fa fa-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Bhargav -->
+        <div class="team-card-premium">
+          <div class="expertise-badge"><i class="fa fa-laptop"></i> Cyber Law</div>
+          <div class="team-img-container">
+            <img src="img/bhargav.png" class="team-img" alt="Bhargav">
+            <div class="team-overlay"></div>
+          </div>
+          <div class="team-info">
+            <span class="team-role">Legal Associate</span>
+            <h3 class="team-name">Bhargav</h3>
+            <p class="team-bio">Focusing on modern legal challenges including cyber crime, data protection, and IP
+              rights.</p>
+            <div class="team-socials">
+              <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
+              <a href="#" class="social-link"><i class="fa fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Imran -->
+        <div class="team-card-premium">
+          <div class="expertise-badge"><i class="fa fa-shield"></i> Defense Counsel</div>
+          <div class="team-img-container">
+            <img src="img/imran.jpeg" class="team-img" alt="Imran">
+            <div class="team-overlay"></div>
+          </div>
+          <div class="team-info">
+            <span class="team-role">Associate</span>
+            <h3 class="team-name">Imran</h3>
+            <p class="team-bio">Dedicated defense attorney ensuring justice is served through rigorous legal research
+              and advocacy.</p>
+            <div class="team-socials">
+              <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
+              <a href="#" class="social-link"><i class="fa fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- 14. Suresh -->
+        <div class="team-card-premium">
+          <div class="expertise-badge"><i class="fa fa-shopping-cart"></i> Consumer</div>
+          <div class="team-img-container">
+            <img src="img/new1.png" class="team-img" alt="Suresh Nair">
+            <div class="team-overlay"></div>
+          </div>
+          <div class="team-info">
+            <span class="team-role">Consumer Court</span>
+            <h3 class="team-name">Suresh Nair</h3>
+            <p class="team-bio">Fighting for consumer rights against unfair trade practices and service deficiencies.
+            </p>
+            <div class="team-socials">
+              <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 15. Priya -->
+        <div class="team-card-premium">
+          <div class="expertise-badge"><i class="fa fa-hand-holding-heart"></i> Human Rights</div>
+          <div class="team-img-container">
+            <img src="img/new3.jpg" class="team-img" alt="Priya Deshmukh">
+            <div class="team-overlay"></div>
+          </div>
+          <div class="team-info">
+            <span class="team-role">Social Justice</span>
+            <h3 class="team-name">Priya Deshmukh</h3>
+            <p class="team-bio">Dedicated to pro-bono work and defending the rights of the underprivileged.</p>
+            <div class="team-socials">
+              <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 16. Deepak - Arbitration -->
+        <div class="team-card-premium">
+          <div class="expertise-badge"><i class="fa fa-handshake-o"></i> Arbitration</div>
+          <div class="team-img-container">
+            <img src="img/new2.jpg" class="team-img" alt="Deepak Chopra">
+            <div class="team-overlay"></div>
+          </div>
+          <div class="team-info">
+            <span class="team-role">Partner</span>
+            <h3 class="team-name">Deepak Chopra</h3>
+            <p class="team-bio">Specialist in domestic and international commercial arbitration and mediation.</p>
+            <div class="team-socials">
+              <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 17. Kabir - Media -->
+        <div class="team-card-premium">
+          <div class="expertise-badge"><i class="fa fa-film"></i> Media Law</div>
+          <div class="team-img-container">
+            <img src="img/new4.jpg" class="team-img" alt="Kabir Khan">
+            <div class="team-overlay"></div>
+          </div>
+          <div class="team-info">
+            <span class="team-role">Media Counsel</span>
+            <h3 class="team-name">Kabir Khan</h3>
+            <p class="team-bio">Advising production houses and artists on copyright, contracts, and defamation.</p>
+            <div class="team-socials">
+              <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 18. Zara - International -->
+        <div class="team-card-premium">
+          <div class="expertise-badge"><i class="fa fa-globe"></i> International</div>
+          <div class="team-img-container">
+            <img src="img/new5.jpg" class="team-img" alt="Zara Sheikh">
+            <div class="team-overlay"></div>
+          </div>
+          <div class="team-info">
+            <span class="team-role">Senior Associate</span>
+            <h3 class="team-name">Zara Sheikh</h3>
+            <p class="team-bio">Handling cross-border mergers, foreign direct investment, and international trade law.
+            </p>
+            <div class="team-socials">
+              <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 19. Aditya - Sports -->
+        <div class="team-card-premium">
+          <div class="expertise-badge"><i class="fa fa-trophy"></i> Sports Law</div>
+          <div class="team-img-container">
+            <img src="img/new6.jpg" class="team-img" alt="Aditya Roy">
+            <div class="team-overlay"></div>
+          </div>
+          <div class="team-info">
+            <span class="team-role">Sports Counsel</span>
+            <h3 class="team-name">Aditya Roy</h3>
+            <p class="team-bio">Representing athletes and leagues in contract negotiations and disciplinary hearings.
+            </p>
+            <div class="team-socials">
+              <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 20. Fatima - Aviation -->
+        <div class="team-card-premium">
+          <div class="expertise-badge"><i class="fa fa-plane"></i> Aviation</div>
+          <div class="team-img-container">
+            <img src="img/new7.jpg" class="team-img" alt="Fatima Begum">
+            <div class="team-overlay"></div>
+          </div>
+          <div class="team-info">
+            <span class="team-role">Associate</span>
+            <h3 class="team-name">Fatima Begum</h3>
+            <p class="team-bio">Expert in aviation regulations, aircraft leasing, and airline liability.</p>
+            <div class="team-socials">
+              <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 21. Rahul - Energy -->
+        <div class="team-card-premium">
+          <div class="expertise-badge"><i class="fa fa-bolt"></i> Energy Law</div>
+          <div class="team-img-container">
+            <img src="img/new8.jpg" class="team-img" alt="Rahul Varma">
+            <div class="team-overlay"></div>
+          </div>
+          <div class="team-info">
+            <span class="team-role">Energy Consultant</span>
+            <h3 class="team-name">Rahul Varma</h3>
+            <p class="team-bio">Focusing on renewable energy projects, oil & gas regulations, and power purchase
+              agreements.</p>
+            <div class="team-socials">
+              <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 22. Simran - Public Policy -->
+        <div class="team-card-premium">
+          <div class="expertise-badge"><i class="fa fa-bullhorn"></i> Public Policy</div>
+          <div class="team-img-container">
+            <img src="img/new9.jpg" class="team-img" alt="Simran Kaur">
+            <div class="team-overlay"></div>
+          </div>
+          <div class="team-info">
+            <span class="team-role">Policy Analyst</span>
+            <h3 class="team-name">Simran Kaur</h3>
+            <p class="team-bio">Bridging the gap between law and government policy for NGOs and think tanks.</p>
+            <div class="team-socials">
+              <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 23. Manoj - Junior Associate -->
+        <div class="team-card-premium">
+          <div class="expertise-badge"><i class="fa fa-briefcase"></i> Civil Law</div>
+          <div class="team-img-container">
+            <img src="img/lawyer111.jpg" class="team-img" alt="Manoj Tiwary">
+            <div class="team-overlay"></div>
+          </div>
+          <div class="team-info">
+            <span class="team-role">Junior Associate</span>
+            <h3 class="team-name">Manoj Tiwary</h3>
+            <p class="team-bio">Assisting senior counsels in drafting, research, and court filings.</p>
+            <div class="team-socials">
+              <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 24. Sanya - Research -->
+        <div class="team-card-premium">
+          <div class="expertise-badge"><i class="fa fa-book"></i> Legal Research</div>
+          <div class="team-img-container">
+            <img src="img/lawyer222.jpg" class="team-img" alt="Sanya Maloney">
+            <div class="team-overlay"></div>
+          </div>
+          <div class="team-info">
+            <span class="team-role">Legal Researcher</span>
+            <h3 class="team-name">Sanya Maloney</h3>
+            <p class="team-bio">Providing in-depth case law analysis and precedent research for complex litigations.</p>
+            <div class="team-socials">
+              <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="js/jquery-1.9.1.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    
-  </body>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#" class="logo-container">
+          <img src="img/Logo.png" alt="Logo" class="logo-img">
+
+        </a>
+        <p>The premier advocate assistance portal. Research, drafting, and representation across all levels of the
+          Indian Judiciary. Since 2014.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your Email Address" class="newsletter-input">
+          <button class="newsletter-btn">JOIN</button>
+        </form>
+      </div>
+
+      <div class="footer-col footer-links">
+        <h4>Firm</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="cases.html">Practice Areas</a></li>
+          <li><a href="OurTeam.html">Our Attorneys</a></li>
+          <li><a href="join_advocate.html">Careers</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="Criminal_Law.html">Criminal Defense</a></li>
+          <li><a href="Civil_Law.html">Civil Litigation</a></li>
+          <li><a href="Family_Law.html">Family Law</a></li>
+          <li><a href="highcourt.html">High Court</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col contact-info">
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fa fa-map-marker"></i><span>Legal Ridge Solutions LLP, Unit no. 504- 511, 5th Floor, Shanta
+              Shriram Tech Park, S.no. - 126, behind PSR Prime Tower, adjacent to DLF Cyber City, Gachibowli, Hyderabad,
+              Telangana 500032.</span></li>
+          <li><i class="fa fa-envelope"></i><span>contact@lawmine.in</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="copyright">&copy; 2025 Law Mine Legal Services. All Rights Reserved.</div>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/lawmine.in/?utm_source=qr#" target="_blank"><i
+            class="fa fa-instagram"></i></a>
+        <a href="https://x.com/Lawmine_in_2025" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61568315652938" target="_blank"><i
+            class="fa fa-facebook"></i></a>
+        <a href="https://www.youtube.com/@lawmine.in365" target="_blank"><i class="fa fa-youtube"></i></a>
+        <a href="https://www.linkedin.com/in/law-mine-578b52339" target="_blank"><i class="fa fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Sticky Header & Scroll Effects
+    window.addEventListener('scroll', function () {
+      const header = document.getElementById('main-header');
+      if (window.scrollY > 50) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Drawer
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const closeDrawer = document.getElementById('close-drawer');
+    const drawer = document.getElementById('mobile-drawer');
+
+    mobileBtn.addEventListener('click', () => drawer.classList.add('active'));
+    closeDrawer.addEventListener('click', () => drawer.classList.remove('active'));
+
+    // VanillaTilt for 3D Effect
+    // Embedding lightweight version for immediate effect or assuming CDN if user prefers. 
+    // For now, let's use a simple custom JS implementation for tilt if library isn't loaded, 
+    // or just standard CSS hover which is already powerful.
+    // But let's add a subtle JS parallax for the cards to make them feel "alive".
+
+    document.querySelectorAll('.team-card-premium').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        // Calculate rotation based on cursor position
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = ((y - centerY) / centerY) * -5; // Max 5deg rotation
+        const rotateY = ((x - centerX) / centerX) * 5;
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+      });
+    });
+  </script>
+</body>
+
 </html>

@@ -2141,24 +2141,29 @@ function toggleChatbot() {
     chatbotIcon.style.display = chatbot.style.display === 'none' ? 'flex' : 'none';
 }
 
-// Event listeners
-chatbotSubmitBtn.addEventListener('click', handleUserResponse);
-chatbotInput.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-        handleUserResponse();
-    }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const closeChatbotBtn = document.getElementById('closeChatbotBtn'); // Ensure the correct ID or selector
+  const chatbot = document.getElementById('chatbot'); // Ensure the correct ID or selector
+  const chatbotIcon = document.getElementById('chatbotIcon'); // Ensure the correct ID or selector
+
+  if (closeChatbotBtn && chatbot && chatbotIcon) {
+      closeChatbotBtn.addEventListener('click', () => {
+          chatbot.style.display = 'none';
+          chatbotIcon.style.display = 'flex';
+
+          setTimeout(() => {
+              chatbotIcon.classList.add('shake');
+          }, 60000);
+
+          // Reset the chatbot state
+          resetChatbot();
+      });
+  } else {
+      console.error('One or more elements (closeChatbotBtn, chatbot, chatbotIcon) are missing in the DOM.');
+  }
 });
 
-closeChatbotBtn.addEventListener('click', () => {
-    chatbot.style.display = 'none';
-    chatbotIcon.style.display = 'flex';
-    setTimeout(() => {
-        chatbotIcon.classList.add('shake');
-    }, 60000);
-
-    // Reset the chatbot state
-    resetChatbot();
-});
 
 chatbotIcon.addEventListener('click', () => {
     chatbot.style.display = 'flex';

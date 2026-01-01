@@ -1,340 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>Join Us | Law Mine</title>
 
-    <title>Law Mine</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/component.css">
-    <link rel="stylesheet" href="css/custom-styles.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/demo.css">
-    <link rel="stylesheet" href="css/font-awesome-ie7.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" integrity="sha384-whateverYourIntegrityHashIs" crossorigin="anonymous">
+
+    <!-- EmailJS -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style.css">
 
     <style>
-/* Container for the entire form section */
-.form-container {
-    max-width: 700px;
-    margin: -15px 312px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+        .join-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
 
-/* Row container for grouping form fields */
-.form-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 0px;
-}
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
 
-/* Individual form group styling */
-.form-group {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
 
-/* Label styling */
-.form-group label {
-    font-size: 14px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
-}
-
-/* Text input and select styling */
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="file"],
-.form-group textarea {
-    padding: 3px;
-    font-size: 14px;
-    border: 3px solid #81a79d;
-    border-radius: 4px;
-    width: 100%;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
-}
-
-/* Focused input style */
-.form-group input[type="text"]:focus,
-.form-group input[type="email"]:focus,
-.form-group input[type="file"]:focus,
-.form-group textarea:focus {
-    border-color: #34b091;
-    outline: none;
-}
-
-/* Styling specifically for the textarea */
-.form-group textarea {
-    resize: vertical;
-    height: 80px;
-}
-
-/* Full width row styling for message box */
-.full-width .form-group-message {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.full-width textarea {
-    height: 100px;
-}
-
-/* Submit button styling */
-button[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    background-color: #34b091;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button[type="submit"]:hover {
-    background-color: #2a9276;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .form-row {
-        flex-direction: column;
-    }
-
-    button[type="submit"] {
-        padding: 10px;
-        font-size: 14px;
-    }
-}
-/* Container for the message section */
-.message-section {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-/* Styling for the message input field */
-.message-field {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-}
-
-/* Label styling specifically for the message field */
-.message-field label {
-    font-size: 14px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
-}
-
-/* Textarea styling */
-.message-field textarea {
-    padding: 10px;
-    font-size: 14px;
-    border: 3px solid #81a79d;
-    border-radius: 4px;
-    width: 100%;
-    box-sizing: border-box;
-    resize: vertical;
-    height: 60px;
-    transition: border-color 0.3s ease;
-}
-
-/* Focus effect for the textarea */
-.message-field textarea:focus {
-    border-color: #34b091;
-    outline: none;
-}
-
-
- 
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
     </style>
 </head>
 
 <body>
-  <!-- Header Section -->
-  <div class="header-wrapper">
-    <div class="site-name" style="display: flex; align-items: center;">
-        <li style="list-style: none; margin-right: 10px;">
-            <a href="index.html" style="padding: 0; background: none; box-shadow: none;">
-                <img src="img/Logo.png" alt="Logo" class="scrolling-logo" style="height: 70px; background: transparent; box-shadow: none;">
-            </a>
-        </li>
-        <h1 class="scrolling-title" style="margin: 0;">Law Mine</h1>
-    </div>
-</div>
 
-    <!-- Navigation Menu -->
-    <div class="menu">
-        <div class="navbar">
-            <div class="container">
-                <div class="navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li>
-                            <a href="javascript:void(0)" class="service-toggle" data-target="trialCourtServicesPanel">Trial Court Services/Cases</a>
-                            <div class="sub-services-panel" id="trialCourtServicesPanel">
-                                <ul class="sub-services">
-                                    <li>
-                                        <a href="#">Criminal Law</a>
-                                        <ul class="nested-sub-services">
-                                            <li><a href="Criminal_Law.html">Metropolitan Magistrate - JFCM</a></li>
-                                            <li><a href="Criminal_Law.html">Metropolitan Sessions Court Services/Cases</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">Civil Law</a>
-                                        <ul class="nested-sub-services">
-                                            <li><a href="Civil_Law.html">Junior Civil Judge Court Services</a></li>
-                                            <li><a href="Civil_Law.html">District Civil Judge Court Services</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="Family_Law.html">Family Law</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a href="highcourt.html">High Court Services/Cases</a></li>
-                        <li><a href="state-govt.html">State Govt Tribunal Services/Cases</a></li>
-                        <li><a href="central-govt.html">Central Govt Tribunal Services/Cases</a></li>
-                        <li><a href="competitive-authority.html">Competitive Authority/Commissions/Forums</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-<!-- Form Section -->
-<div class="form-container">
-    <!--<h1>Join Advocate</h1>-->
-    <form id="advocateForm" action="/submit" method="POST" enctype="multipart/form-data">
-        <div class="form-row">
-            <div class="form-group">
-                <label for="advocateName">Name of the Advocate:</label>
-                <input type="text" id="advocateName" name="advocate_name" required>
-            </div>
-            <div class="form-group">
-                <label for="advocatePhone">Phone No:</label>
-                <input type="text" id="advocatePhone" name="advocate_phone" required>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group">
-                <label for="advocateEmail">Email ID:</label>
-                <input type="email" id="advocateEmail" name="advocate_email" required>
-            </div>
-            <div class="form-group">
-                <label for="advocateLocation">Location:</label>
-                <input type="text" id="advocateLocation" name="advocate_location" required>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group">
-                <label for="advocateExperience">Total Legal Experience:</label>
-                <input type="text" id="advocateExperience" name="advocate_experience" required>
-            </div>
-            <div class="form-group">
-                <label for="advocateSpecialized">Specialized Cases:</label>
-                <input type="text" id="advocateSpecialized" name="advocate_specialized" required>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group">
-                <label for="advocateEnrollment">Enrollment No:</label>
-                <input type="text" id="advocateEnrollment" name="advocate_enrollment" required>
-            </div>
-            <div class="form-group">
-                <label for="advocateResume">Resume in PDF Format:</label>
-                <input type="file" id="advocateResume" name="advocate_resume" accept=".pdf" required>
-            </div>
-        </div>
-        <div class="message-section">
-            <div class="message-field">
-                <label for="advocateNote">Your Message:</label>
-                <textarea id="advocateNote" name="advocate_note" rows="4" required></textarea>
-            </div>
-        </div>
-        
-        <button type="submit">Submit</button>
-    </form>
-    
-</div>
-
-
-    
-
-    <!-- Footer Section -->
-    <div class="footer-wrapper">
+    <!-- TOP BAR -->
+    <div class="top-bar">
         <div class="container">
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <!--<li><a href="#">Supreme Court Services</a></li>-->
-                    <li><a href="cases.html">Cases</a></li>
-            <li><a href="OurTeam.html">Our Team</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="join_advocate.html">Join Our Team</a></li>
+            <div class="top-info">
+                <span><i class="fa fa-envelope"></i> contact@lawmine.in</span>
+                <span><i class="fa fa-clock-o"></i> Mon - Sat: 9:00 - 19:00</span>
+            </div>
+            <div class="top-socials">
+                <span><i class="fa fa-map-marker"></i> Hyderabad, India</span>
+            </div>
+        </div>
+    </div>
 
-                    <li>
-                        <a href="https://www.instagram.com/legalmine.in/?utm_source=qr#" target="_blank">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://x.com/Lawmine_in" target="_blank">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/profile.php?id=61568315652938" target="_blank">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.youtube.com/@Legalmine" target="_blank">
-                            <i class="fa fa-youtube" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.threads.net/@legalmine.in" target="_blank">
-                            <img src="img/icons8-threads-48.png" alt="Threads Icon" style="width: 16px; height: 16px;"> <!-- Replace with actual Threads icon if available -->
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/law-mine-904351338?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bldx8gJhrTrqo5%2F4h0tppyA%3D%3D" target="_blank">
-                            <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                    </li>
+    <!-- MAIN HEADER -->
+    <header id="main-header">
+        <div class="container navbar">
+            <a href="index.html" class="logo-container">
+                <img src="img/lawmine_premium_logo.jpg" alt="Law Mine Logo" class="logo-img">
+
+            </a>
+
+            <ul class="nav-links">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Firm</a></li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Practice Areas <i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Criminal_Law.html" class="dropdown-item">Criminal Defense</a></li>
+                        <li><a href="Civil_Law.html" class="dropdown-item">Civil Litigation</a></li>
+                        <li><a href="Family_Law.html" class="dropdown-item">Family Law</a></li>
+                        <li><a href="state-govt.html" class="dropdown-item">State Tribunals</a></li>
+                        <li><a href="central-govt.html" class="dropdown-item">Central Tribunals</a></li>
+                        <li><a href="highcourt.html" class="dropdown-item">High Court Matters</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="OurTeam.html" class="nav-link">Our Team</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div style="display: flex; gap: 20px; align-items: center;">
+                <a href="contact.html" class="btn btn-gold header-btn"
+                    style="display: none; @media(min-width: 1024px){display: inline-flex;}">Consultation</a>
+                <div class="menu-toggle" id="mobile-menu-btn"><i class="fa fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE DRAWER -->
+    <div class="nav-drawer" id="mobile-drawer">
+        <div style="text-align: right; margin-bottom: 30px;">
+            <i class="fa fa-times" id="close-drawer"
+                style="font-size: 2rem; color: var(--gold-primary); cursor: pointer;"></i>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="cases.html">Services</a>
+            <a href="highcourt.html">High Court</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero" style="min-height: 50vh; height: auto;">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content text-center" style="padding-top: 80px; padding-bottom: 80px;">
+            <h1 class="hero-title">Join Our <span class="text-gold">Network</span></h1>
+            <p class="hero-subtitle" style="margin: 0 auto; border: none; padding: 0;">Collaborate with India's leading
+                legal platform for advocates.</p>
+        </div>
+    </section>
+
+    <!-- FORM SECTION -->
+    <section class="section-padding">
+        <div class="container join-wrapper">
+            <div class="glass-panel" style="padding: 50px; position: relative; overflow: hidden;">
+
+                <!-- Background Decoration -->
+                <div
+                    style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: var(--gold-primary); opacity: 0.1; border-radius: 50%; filter: blur(40px);">
+                </div>
+                <div
+                    style="position: absolute; bottom: -50px; left: -50px; width: 200px; height: 200px; background: #000; opacity: 0.5; border-radius: 50%; filter: blur(40px);">
+                </div>
+
+                <div class="section-header text-center" style="margin-bottom: 40px;">
+                    <h2 class="section-title">Advocate Registration</h2>
+                    <p style="color: var(--text-muted);">Join the elite network of legal professionals.</p>
+                </div>
+
+                <!-- Step Progress -->
+                <div class="form-progress">
+                    <div class="progress-step active" data-step="1">
+                        <div class="step-circle">1</div>
+                        <div class="step-label">Personal Info</div>
+                    </div>
+                    <div class="progress-step" data-step="2">
+                        <div class="step-circle">2</div>
+                        <div class="step-label">Professional</div>
+                    </div>
+                    <div class="progress-step" data-step="3">
+                        <div class="step-circle">3</div>
+                        <div class="step-label">Finalize</div>
+                    </div>
+                </div>
+
+                <form id="advocateFormMultiStep">
+
+                    <!-- STEP 1: PERSONAL INFO -->
+                    <div class="form-step active" id="step-1">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="advocateName" name="advocate_name" class="form-input"
+                                    placeholder=" " required>
+                                <label for="advocateName" class="form-label-floating">Full Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="advocatePhone" name="advocate_phone" class="form-input"
+                                    placeholder=" " required>
+                                <label for="advocatePhone" class="form-label-floating">Phone Number</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="email" id="advocateEmail" name="advocate_email" class="form-input"
+                                    placeholder=" " required>
+                                <label for="advocateEmail" class="form-label-floating">Email Address</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="advocateLocation" name="advocate_location" class="form-input"
+                                    placeholder=" " required>
+                                <label for="advocateLocation" class="form-label-floating">Location / City</label>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <button type="button" class="btn btn-gold btn-next" onclick="nextStep(1)">Next Step <i
+                                    class="fa fa-arrow-right" style="margin-left: 10px;"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: PROFESSIONAL INFO -->
+                    <div class="form-step" id="step-2">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="advocateEnrollment" name="advocate_enrollment" class="form-input"
+                                    placeholder=" " required>
+                                <label for="advocateEnrollment" class="form-label-floating">Bar Council Enrollment
+                                    No.</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="advocateExperience" name="advocate_experience"
+                                    class="form-input" placeholder=" " required min="0">
+                                <label for="advocateExperience" class="form-label-floating">Years of Experience</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="advocateSpecialized" name="advocate_specialized" class="form-input"
+                                placeholder=" " required>
+                            <label for="advocateSpecialized" class="form-label-floating">Specialization (e.g. Criminal,
+                                Civil)</label>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <button type="button" class="btn btn-outline" onclick="prevStep(2)"><i
+                                    class="fa fa-arrow-left" style="margin-right: 10px;"></i> Back</button>
+                            <button type="button" class="btn btn-gold btn-next" onclick="nextStep(2)">Next Step <i
+                                    class="fa fa-arrow-right" style="margin-left: 10px;"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: FINALIZE -->
+                    <div class="form-step" id="step-3">
+                        <div class="form-group">
+                            <textarea id="advocateNote" name="advocate_note" rows="5" class="form-textarea"
+                                placeholder=" " required></textarea>
+                            <label for="advocateNote" class="form-label-floating">Why do you want to join Law
+                                Mine?</label>
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 30px;">
+                            <label class="container-checkbox"
+                                style="display: block; color: var(--text-muted); font-size: 0.9rem; cursor: pointer;">
+                                <input type="checkbox" required style="margin-right: 10px;">
+                                I agree to the <span class="text-gold">Terms of Service</span> and <span
+                                    class="text-gold">Privacy Policy</span>.
+                            </label>
+                        </div>
+
+                        <div style="display: flex; justify-content: space-between;">
+                            <button type="button" class="btn btn-outline" onclick="prevStep(3)"><i
+                                    class="fa fa-arrow-left" style="margin-right: 10px;"></i> Back</button>
+                            <button type="submit" class="btn btn-gold" style="min-width: 200px;">Submit
+                                Application</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUCCESS MODAL -->
+    <div class="custom-modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon"><i class="fa fa-check-circle"></i></div>
+            <h3 style="color: #fff; margin-bottom: 10px;">Application Submitted!</h3>
+            <p style="color: var(--text-muted); margin-bottom: 30px;">Thank you for your interest. We have received your
+                details and will contact you shortly.</p>
+            <button class="btn btn-gold" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo-container">
+                    <img src="img/lawmine_premium_logo.jpg" alt="Logo" class="logo-img">
+
+                </a>
+                <p>The premier advocate assistance portal. Research, drafting, and representation across all levels of
+                    the Indian Judiciary. Since 2014.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" class="newsletter-input">
+                    <button class="newsletter-btn">JOIN</button>
+                </form>
+            </div>
+
+            <div class="footer-col footer-links">
+                <h4>Firm</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="cases.html">Practice Areas</a></li>
+                    <li><a href="OurTeam.html">Our Attorneys</a></li>
+                    <li><a href="join_advocate.html">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="Criminal_Law.html">Criminal Defense</a></li>
+                    <li><a href="Civil_Law.html">Civil Litigation</a></li>
+                    <li><a href="Family_Law.html">Family Law</a></li>
+                    <li><a href="highcourt.html">High Court</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-info">
+                <h4>Contact</h4>
+                <ul>
+                    <li><i class="fa fa-map-marker"></i><span>Legal Ridge Solutions LLP, Unit no. 504- 511, 5th Floor,
+                            Shanta Shriram Tech Park, S.no. - 126, behind PSR Prime Tower, adjacent to DLF Cyber City,
+                            Gachibowli, Hyderabad, Telangana 500032.</span></li>
+                    <li><i class="fa fa-envelope"></i><span>contact@lawmine.in</span></li>
                 </ul>
             </div>
         </div>
-    </div>
 
+        <div class="container footer-bottom">
+            <div class="copyright">&copy; 2025 Law Mine Legal Services. All Rights Reserved.</div>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/lawmine.in/?utm_source=qr#" target="_blank"><i
+                        class="fa fa-instagram"></i></a>
+                <a href="https://x.com/Lawmine_in_2025" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61568315652938" target="_blank"><i
+                        class="fa fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@lawmine.in365" target="_blank"><i class="fa fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/in/law-mine-578b52339" target="_blank"><i
+                        class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="js/jquery-1.9.1.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    
-    </body>
+    <script>
+        // Sticky Header & Scroll Effects
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
+
+        // Mobile Drawer
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const closeDrawer = document.getElementById('close-drawer');
+        const drawer = document.getElementById('mobile-drawer');
+
+        mobileBtn.addEventListener('click', () => drawer.classList.add('active'));
+        closeDrawer.addEventListener('click', () => drawer.classList.remove('active'));
+
+        // EmailJS
+        (function () {
+            emailjs.init("SulfzMHQGRzjcfZIX");
+        })();
+
+        // --- Multi-Step Form Logic ---
+        let currentStep = 1;
+
+        function updateProgress(step) {
+            document.querySelectorAll('.progress-step').forEach((el, index) => {
+                const stepNum = index + 1;
+                if (stepNum < step) {
+                    el.classList.add('completed');
+                    el.classList.remove('active');
+                } else if (stepNum === step) {
+                    el.classList.add('active');
+                    el.classList.remove('completed');
+                } else {
+                    el.classList.remove('active', 'completed');
+                }
+            });
+        }
+
+        function validateStep(step) {
+            const stepDiv = document.getElementById(`step-${step}`);
+            const inputs = stepDiv.querySelectorAll('input:not([type="checkbox"]), textarea');
+            let isValid = true;
+
+            inputs.forEach(input => {
+                if (!input.checkValidity()) {
+                    isValid = false;
+                    input.reportValidity();
+                    // Add shake animation or error style here if desired
+                    input.style.borderColor = "#ff4444";
+                    setTimeout(() => input.style.borderColor = "rgba(255, 255, 255, 0.1)", 2000);
+                }
+            });
+
+            return isValid;
+        }
+
+        function nextStep(step) {
+            if (validateStep(step)) {
+                document.getElementById(`step-${step}`).classList.remove('active');
+                document.getElementById(`step-${step + 1}`).classList.add('active');
+                currentStep = step + 1;
+                updateProgress(currentStep);
+            }
+        }
+
+        function prevStep(step) {
+            document.getElementById(`step-${step}`).classList.remove('active');
+            document.getElementById(`step-${step - 1}`).classList.add('active');
+            currentStep = step - 1;
+            updateProgress(currentStep);
+        }
+
+        function showModal() {
+            document.getElementById('successModal').classList.add('open');
+        }
+
+        function closeModal() {
+            document.getElementById('successModal').classList.remove('open');
+            window.location.href = "index.html"; // Optional redirect
+        }
+
+        // WhatsApp Logic
+        function sendWhatsAppMessage(formData) {
+            const name = formData.get('advocate_name');
+            const phone = formData.get('advocate_phone');
+            const specialized = formData.get('advocate_specialized');
+            const message = `*New Advocate Registration*\n\nName: ${name}\nPhone: ${phone}\nSpecialization: ${specialized}\n\nI have submitted my application via Law Mine.`;
+            // Sending to the specific number mentioned in previous code
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=917396436052&text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Form Submit
+        document.getElementById('advocateFormMultiStep').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerText;
+            submitBtn.innerText = "Submitting...";
+            submitBtn.disabled = true;
+
+            emailjs.sendForm('service_shir3pm', 'template_9vcnoo2', this)
+                .then(function (response) {
+                    submitBtn.innerText = originalText;
+                    submitBtn.disabled = false;
+                    showModal();
+                    sendWhatsAppMessage(formData);
+                    document.getElementById('advocateFormMultiStep').reset();
+                    // Reset steps
+                    document.getElementById(`step-${currentStep}`).classList.remove('active');
+                    document.getElementById(`step-1`).classList.add('active');
+                    currentStep = 1;
+                    updateProgress(1);
+
+                }, function (error) {
+                    alert('Oops! Something went wrong. Please try again.');
+                    submitBtn.innerText = originalText;
+                    submitBtn.disabled = false;
+                });
+        });
+    </script>
+</body>
+
 </html>
